@@ -4,4 +4,4 @@ export * from './layout';
 
 export * from './typo';
 
-export * from './meta';
+export * from './utils';
