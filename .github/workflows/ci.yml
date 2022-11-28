@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   pull_request:
-    branches: "*"
+    branches: '*'
     types: [opened, edited, reopened, synchronize]
   push:
     branches: [main]
@@ -36,8 +36,11 @@ jobs:
       - name: Run Build
         run: yarn build
 
-      - name: Run Tests
-        run: yarn test
+      # - name: Install Browsers
+      #   run: yarn test-install
+
+      # - name: Run Tests
+      #   run: yarn test
 
   release:
     name: Release Version
@@ -55,7 +58,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: '16'
 
       - name: Install Deps
         run: yarn install
