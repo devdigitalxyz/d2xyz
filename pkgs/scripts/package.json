@@ -5,7 +5,7 @@
   "types": "./src/index.ts",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
+    "run": "nodemon",
     "lint": "eslint .",
     "build-dist": "tsc"
   }
