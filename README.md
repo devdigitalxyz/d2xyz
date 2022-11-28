@@ -1,1 +1,1 @@
-# d2xyz
+# D2XYZ Web Development Turborepo Boilerplate

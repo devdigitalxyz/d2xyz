@@ -1,0 +1,6 @@
+{
+  "ignore": ["**/*.test.ts", "dist", ".github", ".husky", "node_modules"],
+  "watch": ["src"],
+  "exec": "yarn build-dist && node dist/run",
+  "ext": "ts"
+}
