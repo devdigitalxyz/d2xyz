@@ -15,7 +15,7 @@ export interface ButtonProps
 export const Button = ({
   children,
   variant = 'contained',
-  color = 'primary',
+  color = 'secondary',
   sx,
   ...props
 }: ButtonProps) => {

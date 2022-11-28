@@ -10,7 +10,6 @@ export interface LinkIconProps
 }
 
 export const LinkIcon = ({
-  children = 'Boop',
   tooltip = 'Navigation',
   icon,
   sx,
