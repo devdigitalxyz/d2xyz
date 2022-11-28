@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Typography, TypographyProps } from '@mui/material';
+import type { FC } from 'react';
+import type { TypographyProps } from '@mui/material';
+import { Typography } from '@mui/material';
 
-export interface H3Props
-  extends Pick<
+export type H3Props = Pick<
     TypographyProps,
     'children' | 'sx' | 'paragraph' | 'color' | 'align'
-  > {}
+  >
 
 export const H3: FC<H3Props> = ({ children, paragraph = true, ...props }) => {
   return (

@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Typography, TypographyProps } from '@mui/material';
+import type { FC } from 'react';
+import type { TypographyProps } from '@mui/material';
+import { Typography } from '@mui/material';
 
-export interface Body2Props
-  extends Pick<
+export type Body2Props = Pick<
     TypographyProps,
     'children' | 'sx' | 'paragraph' | 'color' | 'align'
-  > {}
+  >
 
 export const Body2: FC<Body2Props> = ({
   children,

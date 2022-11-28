@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Fullscreen, FullscreenProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { FullscreenProps } from '.';
+import { Fullscreen } from '.';
 
 export default {
   title: 'Layout/Fullscreen',

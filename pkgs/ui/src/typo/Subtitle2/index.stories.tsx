@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Subtitle2, Subtitle2Props } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { Subtitle2Props } from '.';
+import { Subtitle2 } from '.';
 
 export default {
   title: 'Typography/Subtitle2',

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Box, IconButton, IconButtonProps, Tooltip, Menu } from '@mui/material';
+import type { IconButtonProps} from '@mui/material';
+import { Box, IconButton, Tooltip, Menu } from '@mui/material';
 import MuiMenuIcon from '@mui/icons-material/Menu';
 
 export interface MenuIconLabels {

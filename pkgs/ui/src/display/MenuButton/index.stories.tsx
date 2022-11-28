@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { MenuButton, MenuButtonProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { MenuButtonProps } from '.';
+import { MenuButton } from '.';
 
 export default {
   title: 'Display/Menu Button',

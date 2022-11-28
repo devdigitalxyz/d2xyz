@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Typography, TypographyProps } from '@mui/material';
+import type { FC } from 'react';
+import type { TypographyProps } from '@mui/material';
+import { Typography } from '@mui/material';
 
-export interface Subtitle1Props
-  extends Pick<
+export type Subtitle1Props = Pick<
     TypographyProps,
     'children' | 'sx' | 'paragraph' | 'color' | 'align'
-  > {}
+  >
 
 export const Subtitle1: FC<Subtitle1Props> = ({
   children,

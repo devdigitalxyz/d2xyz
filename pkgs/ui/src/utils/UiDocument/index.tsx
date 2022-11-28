@@ -10,6 +10,7 @@ export class UiDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {(this.props as any).emotionStyleTags}
 
           <link
@@ -34,7 +35,7 @@ UiDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      // eslint-disable-next-line react/display-name
+      // eslint-disable-next-line react/display-name, @typescript-eslint/no-explicit-any
       enhanceApp: (App: any) => (props) =>
         <App emotionCache={cache} {...props} />,
     });

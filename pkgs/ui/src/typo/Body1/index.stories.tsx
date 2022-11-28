@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Body1, Body1Props } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { Body1Props } from '.';
+import { Body1 } from '.';
 
 export default {
   title: 'Typography/Body1',

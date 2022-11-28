@@ -41,6 +41,16 @@ export const MetaTags = ({
 
           <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
 
+          <meta charSet='utf-8' />
+
+          {/* <meta name='theme-color' content='#000000' />
+
+          <link rel='manifest' href='/manifest.json' />
+
+          <link rel='apple-touch-icon' href='/logo192.png' />
+
+          <link rel='shortcut icon' href='/favicon.ico' /> */}
+
           <link rel='preconnect' href='https://fonts.googleapis.com' />
         </>
       )}

@@ -1,16 +1,18 @@
+import type {
+  ReactNode} from 'react';
 import {
-  ReactNode,
   createContext,
   useState,
   useMemo,
   useCallback,
   useEffect,
 } from 'react';
-import {
+import type {
   ThemeOptions,
+  Theme} from '@mui/material';
+import {
   ThemeProvider,
   createTheme,
-  Theme,
   CssBaseline,
 } from '@mui/material';
 import { ToastContainer } from 'react-toastify';

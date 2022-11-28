@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Image, ImageProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { ImageProps } from '.';
+import { Image } from '.';
 
 export default {
   title: 'Display/Image',

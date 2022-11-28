@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Caption, CaptionProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { CaptionProps } from '.';
+import { Caption } from '.';
 
 export default {
   title: 'Typography/Caption',

@@ -11,8 +11,9 @@ type ObjToQueryType = <T>(obj: T | ObjectType) => string;
  * objToQuery
  */
 export const objToQuery: ObjToQueryType = (obj) => {
-  let str = "?";
+  let str = '?';
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   Object.entries(obj).forEach((entry) => {
     if (entry[1]) {
@@ -36,10 +37,10 @@ type QueryToObjType = (str: string) => ObjectType;
 export const queryToObj: QueryToObjType = (str) => {
   const obj: ObjectType = {};
 
-  const newStr = str.startsWith("?") ? str.substring(1, str.length) : str;
+  const newStr = str.startsWith('?') ? str.substring(1, str.length) : str;
 
-  newStr.split("&").forEach((propStr) => {
-    const prop = propStr.split("=");
+  newStr.split('&').forEach((propStr) => {
+    const prop = propStr.split('=');
     const [key, value] = prop;
     obj[key] = value;
   });

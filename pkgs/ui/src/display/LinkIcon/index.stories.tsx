@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { LinkIcon, LinkIconProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { LinkIconProps } from '.';
+import { LinkIcon } from '.';
 
 export default {
   title: 'Display/Link Icon',

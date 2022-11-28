@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link, LinkProps } from '../Link';
-import { Button, ButtonProps } from '../Button';
+import type { LinkProps } from '../Link';
+import { Link } from '../Link';
+import type { ButtonProps } from '../Button';
+import { Button } from '../Button';
 
 export interface LinkButtonProps
   extends Pick<LinkProps, 'href' | 'external' | 'children' | 'sx' | 'title'>,

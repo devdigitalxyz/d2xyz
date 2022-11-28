@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import { Box, useTheme } from '@mui/material';
 import { H1, Fullscreen } from 'ui';
 import { Header } from './header.stories';

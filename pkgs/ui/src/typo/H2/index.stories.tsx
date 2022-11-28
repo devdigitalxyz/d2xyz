@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { H2, H2Props } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { H2Props } from '.';
+import { H2 } from '.';
 
 export default {
   title: 'Typography/H2',

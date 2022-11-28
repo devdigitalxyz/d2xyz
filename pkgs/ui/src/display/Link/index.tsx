@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 import NextLink from 'next/link';
+import type {
+  TypographyProps,
+  LinkProps as MuiLinkProps} from '@mui/material';
 import {
   Typography,
-  TypographyProps,
-  Link as MuiLink,
-  LinkProps as MuiLinkProps,
+  Link as MuiLink
 } from '@mui/material';
 
 export interface LinkProps

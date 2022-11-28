@@ -1,6 +1,7 @@
 import React from 'react';
 import { IconButton, Tooltip } from '@mui/material';
-import { Link, LinkProps } from '../Link';
+import type { LinkProps } from '../Link';
+import { Link } from '../Link';
 import MuiLinkIcon from '@mui/icons-material/Link';
 
 export interface LinkIconProps

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { MenuIcon, MenuIconProps } from '.';
+import type { Story, Meta } from '@storybook/react';
+import type { MenuIconProps } from '.';
+import { MenuIcon } from '.';
 
 export default {
   title: 'Display/Menu Icon',

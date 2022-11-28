@@ -1,4 +1,5 @@
-import { ThemeOptions, createTheme } from '@mui/material';
+import type { ThemeOptions} from '@mui/material';
+import { createTheme } from '@mui/material';
 
 const { breakpoints } = createTheme();
 
