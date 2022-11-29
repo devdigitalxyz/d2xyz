@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { Box, useTheme } from '@mui/material';
+import { useTheme, Box } from '@mui/material';
 
 export interface TEMPLATELabelsProps {
   text?: string;
