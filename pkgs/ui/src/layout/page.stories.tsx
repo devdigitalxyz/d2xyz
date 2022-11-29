@@ -2,8 +2,8 @@ import React from 'react';
 import type { Story, Meta } from '@storybook/react';
 import { Box, useTheme } from '@mui/material';
 import { H1, Fullscreen } from 'ui';
-import { Header } from './header.stories';
-import { Footer } from './footer.stories';
+import { Header } from './Header/header.stories';
+import { Footer } from './Footer/footer.stories';
 import { hexToRgb } from 'scripts';
 
 export default {

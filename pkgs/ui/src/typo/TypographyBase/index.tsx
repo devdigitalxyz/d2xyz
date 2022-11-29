@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 
 export type TypographyBaseProps = Pick<
   TypographyProps,
-  'children' | 'sx' | 'paragraph' | 'color' | 'align' | 'variant'
+  'children' | 'sx' | 'paragraph' | 'color' | 'align' | 'variant' | 'className'
 >;
 
 export const TypographyBase: FC<TypographyBaseProps> = ({

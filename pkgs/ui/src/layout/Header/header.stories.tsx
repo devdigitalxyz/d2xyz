@@ -27,7 +27,7 @@ const intlRecord = {
 };
 
 export default {
-  title: 'Layout/Header',
+  title: 'Layout/Header Story',
   parameters: {
     componentSubtitle: 'Header Component',
   },

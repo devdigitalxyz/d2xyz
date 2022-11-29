@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default {
-  title: 'Layout/Footer',
+  title: 'Layout/Footer Story',
   parameters: {
     componentSubtitle: 'Footer Component',
   },
