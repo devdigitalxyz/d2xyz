@@ -1,5 +1,4 @@
-import type {
-  ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import {
   createContext,
   useState,
@@ -7,19 +6,13 @@ import {
   useCallback,
   useEffect,
 } from 'react';
-import type {
-  ThemeOptions,
-  Theme} from '@mui/material';
-import {
-  ThemeProvider,
-  createTheme,
-  CssBaseline,
-} from '@mui/material';
+import type { ThemeOptions, Theme } from '@mui/material';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
 import { defaultTheme } from '../../theme';
 
 import 'react-toastify/dist/ReactToastify.css';
-import './tailwind.css';
+import './globals.css';
 
 export interface UiContextType {
   theme?: ThemeOptions;

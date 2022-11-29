@@ -1,14 +1,14 @@
-import type { ThemeOptions} from '@mui/material';
+import type { ThemeOptions } from '@mui/material';
 import { createTheme } from '@mui/material';
 
 const { breakpoints } = createTheme();
 
 export const typography: ThemeOptions['typography'] = {
   fontFamily: [
+    'Public Sans',
     '-apple-system',
     'BlinkMacSystemFont',
     '"Segoe UI"',
-    'Public Sans',
     '"Helvetica Neue"',
     'Arial',
     'sans-serif',
