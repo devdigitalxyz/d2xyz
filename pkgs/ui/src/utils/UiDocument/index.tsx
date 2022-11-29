@@ -12,11 +12,6 @@ export class UiDocument extends Document {
         <Head>
           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {(this.props as any).emotionStyleTags}
-
-          <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Public+Sans:wght@400;700&display=swap'
-          />
         </Head>
         <body>
           <Main />

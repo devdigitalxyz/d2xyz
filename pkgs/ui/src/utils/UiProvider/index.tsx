@@ -6,9 +6,11 @@ import {
   useCallback,
   useEffect,
 } from 'react';
+import Script from 'next/script';
 import type { ThemeOptions, Theme } from '@mui/material';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
+import { MetaTags } from '../MetaTags';
 import { defaultTheme } from '../../theme';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,9 +32,13 @@ export const UiContext = createContext<UiContextType>(init);
 
 export interface UiProviderProps {
   children: ReactNode;
+  GA_MEASUREMENT_ID?: string;
 }
 
-export const UiProvider = ({ children }: UiProviderProps) => {
+export const UiProvider = ({
+  children,
+  GA_MEASUREMENT_ID,
+}: UiProviderProps) => {
   const [theme, themeSet] = useState<UiContextType['theme']>(init.theme);
   const [dark, darkSet] = useState<UiContextType['dark']>(init.dark);
 
@@ -74,6 +80,29 @@ export const UiProvider = ({ children }: UiProviderProps) => {
 
   return (
     <UiContext.Provider value={ctx}>
+      {GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== '' && (
+        <>
+          <Script
+            id='gtag'
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy='afterInteractive'
+            async
+          />
+          <Script
+            id='ga'
+            strategy='afterInteractive'
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+      
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `,
+            }}
+          />
+        </>
+      )}
       <ThemeProvider theme={themeProvided}>
         <CssBaseline />
         <ToastContainer
@@ -89,6 +118,7 @@ export const UiProvider = ({ children }: UiProviderProps) => {
           theme='colored'
           style={{ fontSize: '14px' }}
         />
+        <MetaTags app />
         <>{children}</>
       </ThemeProvider>
     </UiContext.Provider>
