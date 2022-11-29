@@ -1,20 +1,12 @@
 import type { FC } from 'react';
-import type { TypographyProps } from '@mui/material';
-import { Typography } from '@mui/material';
+import { TypographyBase, type TypographyBaseProps } from '../TypographyBase';
 
-export type Subtitle1Props = Pick<
-    TypographyProps,
-    'children' | 'sx' | 'paragraph' | 'color' | 'align'
-  >
+export type Subtitle1Props = TypographyBaseProps;
 
-export const Subtitle1: FC<Subtitle1Props> = ({
-  children,
-  paragraph = true,
-  ...props
-}) => {
+export const Subtitle1: FC<Subtitle1Props> = ({ children, ...props }) => {
   return (
-    <Typography variant='subtitle1' paragraph={paragraph} {...props}>
+    <TypographyBase variant='subtitle1' {...props}>
       {children}
-    </Typography>
+    </TypographyBase>
   );
 };

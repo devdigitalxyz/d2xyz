@@ -19,7 +19,7 @@ export const typography: ThemeOptions['typography'] = {
   h1: {
     fontSize: '48px',
     lineHeight: '48px',
-    fontWeight: 600,
+    fontWeight: 700,
     [breakpoints.down('sm')]: {
       fontSize: '42px',
       lineHeight: '42px',
@@ -28,13 +28,13 @@ export const typography: ThemeOptions['typography'] = {
   h2: {
     fontSize: '36px',
     lineHeight: '36px',
-    fontWeight: 600,
+    fontWeight: 700,
     // [breakpoints.down('sm')]: {},
   },
   h3: {
     fontSize: '30px',
     lineHeight: '30px',
-    fontWeight: 600,
+    fontWeight: 700,
     // [breakpoints.down('sm')]: {},
   },
   h4: {
@@ -58,7 +58,7 @@ export const typography: ThemeOptions['typography'] = {
   subtitle1: {
     fontSize: '24px',
     lineHeight: '24px',
-    fontWeight: 600,
+    fontWeight: 700,
     // [breakpoints.down('sm')]: {},
   },
   subtitle2: {
@@ -91,7 +91,7 @@ export const typography: ThemeOptions['typography'] = {
   },
   button: {
     fontSize: '14px',
-    fontWeight: 600,
+    fontWeight: 700,
     textTransform: 'none',
     // [breakpoints.down('sm')]: {},
   },

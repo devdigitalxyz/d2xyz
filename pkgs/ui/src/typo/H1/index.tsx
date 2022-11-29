@@ -1,16 +1,12 @@
 import type { FC } from 'react';
-import type { TypographyProps } from '@mui/material';
-import { Typography } from '@mui/material';
+import { TypographyBase, type TypographyBaseProps } from '../TypographyBase';
 
-export type H1Props = Pick<
-    TypographyProps,
-    'children' | 'sx' | 'paragraph' | 'color' | 'align'
-  >
+export type H1Props = TypographyBaseProps;
 
-export const H1: FC<H1Props> = ({ children, paragraph = true, ...props }) => {
+export const H1: FC<H1Props> = ({ children, ...props }) => {
   return (
-    <Typography variant='h1' paragraph={paragraph} {...props}>
+    <TypographyBase variant='h1' {...props}>
       {children}
-    </Typography>
+    </TypographyBase>
   );
 };
