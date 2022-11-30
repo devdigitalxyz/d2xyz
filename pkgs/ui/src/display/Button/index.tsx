@@ -1,9 +1,6 @@
 import type { ReactNode } from 'react';
-import type {
-  ButtonProps as MuiButtonProps} from '@mui/material';
-import {
-  Button as MuiButton
-} from '@mui/material';
+import type { ButtonProps as MuiButtonProps } from '@mui/material';
+import { Button as MuiButton } from '@mui/material';
 
 export interface ButtonProps
   extends Pick<
@@ -16,7 +13,7 @@ export interface ButtonProps
 export const Button = ({
   children,
   variant = 'contained',
-  color = 'secondary',
+  color = 'primary',
   sx,
   ...props
 }: ButtonProps) => {

@@ -5,7 +5,7 @@ export type H2Props = TypographyBaseProps;
 
 export const H2: FC<H2Props> = ({ children, ...props }) => {
   return (
-    <TypographyBase variant='h1' {...props}>
+    <TypographyBase variant='h2' {...props}>
       {children}
     </TypographyBase>
   );

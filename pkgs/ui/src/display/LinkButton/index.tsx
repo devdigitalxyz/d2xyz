@@ -5,7 +5,10 @@ import type { ButtonProps } from '../Button';
 import { Button } from '../Button';
 
 export interface LinkButtonProps
-  extends Pick<LinkProps, 'href' | 'external' | 'children' | 'sx' | 'title'>,
+  extends Pick<
+      LinkProps,
+      'href' | 'external' | 'children' | 'sx' | 'title' | 'className'
+    >,
     Pick<ButtonProps, 'variant'> {}
 
 export const LinkButton = ({

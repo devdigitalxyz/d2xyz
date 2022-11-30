@@ -14,6 +14,7 @@ export const LinkIcon = ({
   tooltip = 'Navigation',
   icon,
   sx,
+  children,
   ...props
 }: LinkIconProps) => {
   return (
@@ -23,7 +24,9 @@ export const LinkIcon = ({
       onClick={(e) => e.stopPropagation()}
     >
       <Tooltip title={tooltip}>
-        <IconButton size='small'>{icon || <MuiLinkIcon />}</IconButton>
+        <IconButton size='small'>
+          {icon || children || <MuiLinkIcon />}
+        </IconButton>
       </Tooltip>
     </Link>
   );

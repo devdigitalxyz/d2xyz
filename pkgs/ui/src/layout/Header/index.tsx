@@ -1,18 +1,13 @@
 import type { FC, ReactNode } from 'react';
 import { useTheme, Box, Grid } from '@mui/material';
-import { Caption } from 'ui';
 
 export interface HeaderProps {
   children?: ReactNode;
   transparent?: boolean;
-  copyrightMsg?: string;
+  home?: ReactNode;
 }
 
-export const Header: FC<HeaderProps> = ({
-  children,
-  transparent,
-  copyrightMsg,
-}) => {
+export const Header: FC<HeaderProps> = ({ children, transparent, home }) => {
   const theme = useTheme();
 
   return (
@@ -27,20 +22,17 @@ export const Header: FC<HeaderProps> = ({
       <Grid
         container
         alignItems='center'
-        justifyContent='center'
+        justifyContent='space-between'
         style={{
-          minHeight: '69px',
+          minHeight: '45px',
         }}
+        p={1}
       >
-        {children && (
-          <Grid item xs={12}>
-            <Box>{children}</Box>
-          </Grid>
-        )}
         <Grid item>
-          <Box>
-            <Caption>{copyrightMsg}</Caption>
-          </Box>
+          <Box>{home}</Box>
+        </Grid>
+        <Grid item>
+          <Box>{children}</Box>
         </Grid>
       </Grid>
     </Box>
