@@ -26,12 +26,20 @@ const Logo = () => (
 const Widgets = () => (
   <Grid container alignItems='center' spacing={1}>
     <Grid item>
-      <LinkIcon external href='https://github.com/devdigitalxyz'>
+      <LinkIcon
+        external
+        href='https://github.com/devdigitalxyz'
+        tooltip='Github'
+      >
         <GitHubIcon sx={{ color: '#fff', fontSize: '27px' }} />
       </LinkIcon>
     </Grid>
     <Grid item>
-      <LinkIcon external href='https://twitter.com/devdigitalxyz'>
+      <LinkIcon
+        external
+        href='https://twitter.com/devdigitalxyz'
+        tooltip='Twitter'
+      >
         <TwitterIcon sx={{ color: '#fff', fontSize: '27px' }} />
       </LinkIcon>
     </Grid>
