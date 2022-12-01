@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useTheme } from '@mui/material';
 
 export type MetaTagsProps = {
   title?: string;
@@ -19,6 +20,8 @@ export const MetaTags = ({
   keywords = 'keywords',
   app,
 }: MetaTagsProps) => {
+  const { palette } = useTheme();
+
   return (
     <Head>
       {title && <title>{title}</title>}
@@ -34,6 +37,7 @@ export const MetaTags = ({
       {keywords && <meta name='keywords' content={keywords} />}
 
       {favicon && <link rel='icon' href={favicon} />}
+      {favicon && <link rel='shortcut icon' href={favicon} />}
 
       {app && (
         <>
@@ -43,13 +47,15 @@ export const MetaTags = ({
 
           <meta charSet='utf-8' />
 
-          {/* <meta name='theme-color' content='#000000' />
+          <meta name='theme-color' content={palette.primary.main} />
+
+          {/* 
 
           <link rel='manifest' href='/manifest.json' />
 
           <link rel='apple-touch-icon' href='/logo192.png' />
 
-          <link rel='shortcut icon' href='/favicon.ico' /> */}
+           */}
 
           <link rel='preconnect' href='https://fonts.googleapis.com' />
         </>
