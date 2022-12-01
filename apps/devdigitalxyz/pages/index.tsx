@@ -4,7 +4,6 @@ import { HomeView } from '../views';
 
 const HomePage: NextPage = () => {
   return <HomeView />;
-  // return <>HOME</>;
 };
 
 export default HomePage;

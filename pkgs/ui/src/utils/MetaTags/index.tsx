@@ -11,10 +11,10 @@ export type MetaTagsProps = {
 };
 
 export const MetaTags = ({
-  title = 'Title',
-  description = 'description',
-  favicon = '/static/img/favicon.png',
-  ogimg = '/static/img/ogimg.png',
+  title = 'D2XYZ',
+  description = 'Fulfilling Web Development and Frontend Engineering for digital products',
+  favicon = '/static/img/devdigital-logo.png',
+  ogimg = '/static/img/devdigital-ogimg.png',
   author = 'author',
   keywords = 'keywords',
   app,
