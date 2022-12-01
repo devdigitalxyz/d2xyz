@@ -13,7 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Logo = () => (
-  <LinkButton href='/'>
+  <LinkButton href='/' title='devdigitalxyz'>
     <Image
       responsive
       alt='Logo'
@@ -30,6 +30,7 @@ const Widgets = () => (
         external
         href='https://github.com/devdigitalxyz'
         tooltip='Github'
+        title='devdigitalxyz'
       >
         <GitHubIcon sx={{ color: '#fff', fontSize: '27px' }} />
       </LinkIcon>
@@ -39,6 +40,7 @@ const Widgets = () => (
         external
         href='https://twitter.com/devdigitalxyz'
         tooltip='Twitter'
+        title='devdigitalxyz'
       >
         <TwitterIcon sx={{ color: '#fff', fontSize: '27px' }} />
       </LinkIcon>
