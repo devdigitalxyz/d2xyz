@@ -13,8 +13,8 @@ export type MetaTagsProps = {
 export const MetaTags = ({
   title = 'D2XYZ',
   description = 'Fulfilling Web Development and Frontend Engineering for digital products',
-  favicon = '/static/img/devdigital-logo.png',
-  ogimg = '/static/img/devdigital-ogimg.png',
+  favicon = '/static/img/devdigitalxyz-logo.png',
+  ogimg = '/static/img/devdigitalxyz-ogimg.png',
   author = 'author',
   keywords = 'keywords',
   app,
