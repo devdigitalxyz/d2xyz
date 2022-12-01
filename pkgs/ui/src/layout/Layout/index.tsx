@@ -45,12 +45,12 @@ export const Layout: FC<LayoutProps> = ({
             loop
             muted
             style={{
-              overflow: 'none',
-              minHeight: '100%',
-              minWidth: '100%',
+              objectFit: 'cover',
+              width: '100vw',
+              height: '100vh',
               position: 'fixed',
-              top: 0,
-              left: -0,
+              top: -0,
+              left: 0,
             }}
           >
             <source src={bgVideo} />
@@ -81,7 +81,7 @@ export const Layout: FC<LayoutProps> = ({
             top: 0,
             left: 0,
             zIndex: -25,
-            backgroundImage: `linear-gradient(to bottom right, ${bgGradient.from}, ${bgGradient.to})`,
+            backgroundImage: `linear-gradient(to bottom right, ${bgGradient.from}, ${bgGradient.from}, ${bgGradient.to})`,
           }}
         ></Box>
       )}
@@ -92,11 +92,7 @@ export const Layout: FC<LayoutProps> = ({
         </Box>
       )}
 
-      {children && (
-        <Box sx={{ paddingTop: '81px', paddingBottom: '120px' }}>
-          {children}
-        </Box>
-      )}
+      {children && <Box>{children}</Box>}
 
       {footer && (
         <Box

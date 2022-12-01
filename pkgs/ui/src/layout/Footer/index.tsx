@@ -39,7 +39,7 @@ export const Footer: FC<FooterProps> = ({
         )}
         <Grid item>
           <Box>
-            <Caption>{copyrightMsg}</Caption>
+            <Caption sx={{ color: 'white' }}>{copyrightMsg}</Caption>
           </Box>
         </Grid>
       </Grid>

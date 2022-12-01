@@ -53,6 +53,7 @@ export const UiProvider = ({
         ...t,
         palette: {
           mode: 'dark',
+          ...t?.palette,
         },
       }));
     } else {
@@ -60,6 +61,7 @@ export const UiProvider = ({
         ...t,
         palette: {
           mode: 'light',
+          ...t?.palette,
         },
       }));
     }

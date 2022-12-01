@@ -19,8 +19,8 @@ export const Image = ({
 
   if (responsive) {
     opts = {
-      maxWidth: '100%',
-      maxHeight: 'inherit',
+      width: '100%',
+      height: 'auto',
     };
   }
 
@@ -29,7 +29,7 @@ export const Image = ({
       src={src}
       title={title}
       alt={alt}
-      style={{ ...opts, userSelect: 'none', ...sx }}
+      style={{ ...opts, userSelect: 'none', display: 'inline-block', ...sx }}
     />
   );
 };
