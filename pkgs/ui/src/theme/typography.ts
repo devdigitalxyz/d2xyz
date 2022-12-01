@@ -90,7 +90,7 @@ export const typography: ThemeOptions['typography'] = {
     // [breakpoints.down('sm')]: {},
   },
   button: {
-    fontSize: '14px',
+    fontSize: '15px',
     fontWeight: 700,
     textTransform: 'none',
     // [breakpoints.down('sm')]: {},
