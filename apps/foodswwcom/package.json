@@ -1,0 +1,17 @@
+{
+  "name": "foodswwcom",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sb": "start-storybook -p 1337 --ci -s ./public",
+    "build-sb": "build-storybook -s ./public"
+  },
+  "dependencies": {
+    "scripts": "*",
+    "ui": "*"
+  }
+}
