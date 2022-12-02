@@ -1,70 +1,10 @@
 import { Grid, Box } from '@mui/material';
-import {
-  Layout,
-  Image,
-  LinkButton,
-  LinkIcon,
-  Header,
-  Footer,
-  Subtitle1,
-  Subtitle2,
-} from 'ui';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-
-const Logo = () => (
-  <LinkButton href='/' title='devdigitalxyz'>
-    <Image
-      responsive
-      alt='Logo'
-      src='/static/img/devdigitalxyz-logo-alpha.png'
-      sx={{ maxHeight: '39px' }}
-    />
-  </LinkButton>
-);
-
-const Widgets = () => (
-  <Grid container alignItems='center' spacing={1}>
-    <Grid item>
-      <LinkIcon
-        external
-        href='https://github.com/devdigitalxyz'
-        tooltip='Github'
-        title='devdigitalxyz'
-      >
-        <GitHubIcon sx={{ color: '#fff', fontSize: '27px' }} />
-      </LinkIcon>
-    </Grid>
-    <Grid item>
-      <LinkIcon
-        external
-        href='https://twitter.com/devdigitalxyz'
-        tooltip='Twitter'
-        title='devdigitalxyz'
-      >
-        <TwitterIcon sx={{ color: '#fff', fontSize: '27px' }} />
-      </LinkIcon>
-    </Grid>
-  </Grid>
-);
+import { Image, LinkButton, Subtitle1, Subtitle2 } from 'ui';
+import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {
   return (
-    <Layout
-      bgVideo='static/vid/devdigitalxyz-bg.mp4'
-      bgGradient={{
-        from: '#000000ea',
-        to: '#1d1c1fea',
-      }}
-      header={
-        <Header transparent home={<Logo />}>
-          <Widgets />
-        </Header>
-      }
-      footer={
-        <Footer transparent copyrightMsg='Copyright © devdigital.xyz 2022' />
-      }
-    >
+    <HomeLayout>
       <Grid
         container
         sx={{ minHeight: '100vh', color: '#fff' }}
@@ -140,6 +80,6 @@ export const HomeView = () => {
           </Box>
         </Grid>
       </Grid>
-    </Layout>
+    </HomeLayout>
   );
 };
