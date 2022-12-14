@@ -2,7 +2,11 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "$NEXT_PUBLIC_GA_DEVDIGITALXYZ"],
+      "dependsOn": [
+        "^build",
+        "$NEXT_PUBLIC_GA_DEVDIGITALXYZ",
+        "$NEXT_PUBLIC_GA_RICARDOJRMCOM"
+      ],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {

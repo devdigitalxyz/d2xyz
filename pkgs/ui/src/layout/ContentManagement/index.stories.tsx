@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import type { Meta } from '@storybook/react';
 import { Box, Paper, Grid, Button, Typography, TextField } from '@mui/material';
+import dayjs from 'dayjs';
 import { Image, Link } from '../../display';
 import { useContent } from '../../../../hooks/src/useContent';
 
@@ -27,6 +28,7 @@ export const Default = () => {
 
   const updateText = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
+      // console.log(e.target.value);
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       searchSet(e.target.value);
@@ -42,7 +44,6 @@ export const Default = () => {
           <TextField
             type='text'
             fullWidth
-            label='Search'
             value={search}
             onChange={updateText}
           />
@@ -141,12 +142,17 @@ export const Default = () => {
                           {item.title}
                         </Typography>
                       </Box>
-                      <Box>
+                      <Box textAlign='center'>
                         <Image
                           src={item.img}
                           sx={{ maxHeight: '300px' }}
                           alt='book'
                         />
+                      </Box>
+                      <Box>
+                        <Typography textAlign='center'>
+                          {dayjs(item.date).format('DD/MM/YYYY')}
+                        </Typography>
                       </Box>
                     </Box>
                   </Link>

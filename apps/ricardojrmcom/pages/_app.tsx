@@ -7,7 +7,7 @@ import { defaultTheme } from '../cfg/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_DEVDIGITALXYZ || '';
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_RICARDOJRMCOM || '';
 
 interface UiAppProps extends AppProps {
   emotionCache?: EmotionCache;

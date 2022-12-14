@@ -6,6 +6,7 @@ import React, {
   createContext,
   useContext,
   type ReactNode,
+  useEffect,
 } from 'react';
 
 export type ContentOrderByType = 'date' | 'title';
@@ -79,9 +80,11 @@ export const ContentProvider = ({
   );
 
   const itemsDisplay = useMemo<ContentContextType['itemsDisplay']>(() => {
+    let filtered = Object.values(items);
+
     // filter items
     if (filters.length) {
-      return Object.values(items).filter((item) => {
+      filtered = filtered.filter((item) => {
         return filters.every((filter) => {
           return item.tags.includes(filter);
         });
@@ -90,7 +93,7 @@ export const ContentProvider = ({
 
     // order items
     if (orderBy === 'date') {
-      return Object.values(items).sort((a, b) => {
+      filtered = filtered.sort((a, b) => {
         return orderDir === 'desc'
           ? b.date.getTime() - a.date.getTime()
           : a.date.getTime() - b.date.getTime();
@@ -98,7 +101,7 @@ export const ContentProvider = ({
     }
 
     if (orderBy === 'title') {
-      return Object.values(items).sort((a, b) => {
+      filtered = filtered.sort((a, b) => {
         return orderDir === 'desc'
           ? b.title.localeCompare(a.title)
           : a.title.localeCompare(b.title);
@@ -107,8 +110,7 @@ export const ContentProvider = ({
 
     // search items
     if (search.length) {
-      console.log(search);
-      return Object.values(items).filter((item) => {
+      filtered = filtered.filter((item) => {
         return (
           item.title.toLowerCase().includes(search.toLowerCase()) ||
           item.description.toLowerCase().includes(search.toLowerCase())
@@ -116,7 +118,7 @@ export const ContentProvider = ({
       });
     }
 
-    return Object.values(items);
+    return filtered;
   }, [items, filters, orderBy, orderDir, search]);
 
   const ctx: ContentContextType = useMemo(

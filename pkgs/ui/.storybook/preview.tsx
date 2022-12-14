@@ -21,7 +21,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <UiProvider>
-      <ContentProvider items={books} tags={['marketing', 'sales']}>
+      <ContentProvider items={books} tags={['Marketing', 'Sales']}>
         {Story()}
       </ContentProvider>
     </UiProvider>
