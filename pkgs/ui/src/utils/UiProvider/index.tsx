@@ -10,7 +10,7 @@ import Script from 'next/script';
 import type { ThemeOptions, Theme } from '@mui/material';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
-import { MetaTags } from '../MetaTags';
+import { MetaTags, type MetaTagsProps } from '../MetaTags';
 import { defaultTheme } from '../../theme';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,12 +34,14 @@ export interface UiProviderProps {
   children: ReactNode;
   GA_MEASUREMENT_ID?: string;
   THEME?: ThemeOptions;
+  META?: MetaTagsProps;
 }
 
 export const UiProvider = ({
   children,
   GA_MEASUREMENT_ID,
   THEME,
+  META,
 }: UiProviderProps) => {
   const [theme, themeSet] = useState<UiContextType['theme']>(
     THEME || init.theme,
@@ -124,7 +126,7 @@ export const UiProvider = ({
           theme='colored'
           style={{ fontSize: '14px' }}
         />
-        <MetaTags app />
+        <MetaTags app {...META} />
         <>{children}</>
       </ThemeProvider>
     </UiContext.Provider>
