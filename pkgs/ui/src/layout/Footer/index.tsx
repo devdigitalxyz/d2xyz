@@ -1,18 +1,18 @@
 import type { FC } from 'react';
 import { useTheme, Box, Grid } from '@mui/material';
 import { Body2 } from 'ui';
-import { Socials } from '../Socials';
+import { Socials, type SocialsProps } from '../Socials';
 
 export interface FooterProps {
   transparent?: boolean;
   copyrightMsg?: string;
-  brandName?: string;
+  socials?: SocialsProps;
 }
 
 export const Footer: FC<FooterProps> = ({
   transparent,
   copyrightMsg,
-  brandName,
+  socials,
 }) => {
   const theme = useTheme();
 
@@ -37,7 +37,7 @@ export const Footer: FC<FooterProps> = ({
       >
         <Grid item xs={12}>
           <Box mb={1}>
-            <Socials github twitter brandName={brandName} />
+            <Socials {...socials} />
           </Box>
         </Grid>
         <Grid item>

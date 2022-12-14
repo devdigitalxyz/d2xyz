@@ -35,7 +35,13 @@ export const Link = ({
   }
 
   return (
-    <NextLink href={href} title={title} {...linkProps} passHref>
+    <NextLink
+      href={href}
+      title={title}
+      {...linkProps}
+      style={{ ...linkDecoration }}
+      passHref
+    >
       {children}
     </NextLink>
   );
