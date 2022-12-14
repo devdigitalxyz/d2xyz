@@ -33,13 +33,17 @@ export const UiContext = createContext<UiContextType>(init);
 export interface UiProviderProps {
   children: ReactNode;
   GA_MEASUREMENT_ID?: string;
+  THEME?: ThemeOptions;
 }
 
 export const UiProvider = ({
   children,
   GA_MEASUREMENT_ID,
+  THEME,
 }: UiProviderProps) => {
-  const [theme, themeSet] = useState<UiContextType['theme']>(init.theme);
+  const [theme, themeSet] = useState<UiContextType['theme']>(
+    THEME || init.theme,
+  );
   const [dark, darkSet] = useState<UiContextType['dark']>(init.dark);
 
   const toggleDark = useCallback(() => {

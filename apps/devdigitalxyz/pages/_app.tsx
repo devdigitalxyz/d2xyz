@@ -3,6 +3,7 @@ import { CacheProvider } from '@emotion/react';
 import type { EmotionCache } from '@emotion/react';
 import { createEmotionCache } from 'scripts';
 import { UiProvider } from 'ui/src/utils';
+import { defaultTheme } from '../cfg/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -19,7 +20,7 @@ const UiApp: AppType = (props: UiAppProps) => {
 
   return (
     <CacheProvider value={emotionCache}>
-      <UiProvider GA_MEASUREMENT_ID={GA_MEASUREMENT_ID}>
+      <UiProvider GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} THEME={defaultTheme}>
         <AnyComponent {...pageProps} />
       </UiProvider>
     </CacheProvider>
