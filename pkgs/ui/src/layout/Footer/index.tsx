@@ -1,17 +1,18 @@
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 import { useTheme, Box, Grid } from '@mui/material';
-import { Caption } from 'ui';
+import { Body2 } from 'ui';
+import { Socials } from '../Socials';
 
 export interface FooterProps {
-  children?: ReactNode;
   transparent?: boolean;
   copyrightMsg?: string;
+  brandName?: string;
 }
 
 export const Footer: FC<FooterProps> = ({
-  children,
   transparent,
   copyrightMsg,
+  brandName,
 }) => {
   const theme = useTheme();
 
@@ -23,6 +24,8 @@ export const Footer: FC<FooterProps> = ({
           : theme.palette.primary.main,
       }}
       className='text-white'
+      pt={2}
+      pb={3}
     >
       <Grid
         container
@@ -32,14 +35,14 @@ export const Footer: FC<FooterProps> = ({
           minHeight: '69px',
         }}
       >
-        {children && (
-          <Grid item xs={12}>
-            <Box>{children}</Box>
-          </Grid>
-        )}
+        <Grid item xs={12}>
+          <Box mb={1}>
+            <Socials github twitter brandName={brandName} />
+          </Box>
+        </Grid>
         <Grid item>
           <Box>
-            <Caption sx={{ color: 'white' }}>{copyrightMsg}</Caption>
+            <Body2 sx={{ color: 'white' }}>{copyrightMsg}</Body2>
           </Box>
         </Grid>
       </Grid>
