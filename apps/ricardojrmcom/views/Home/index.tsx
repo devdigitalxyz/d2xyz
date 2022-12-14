@@ -7,7 +7,12 @@ export const HomeView = () => {
     <HomeLayout>
       <Grid
         container
-        sx={{ minHeight: '100vh', color: '#fff' }}
+        sx={{
+          minHeight: '100vh',
+          color: '#fff',
+          paddingTop: '81px',
+          paddingBottom: '120px',
+        }}
         alignItems='center'
         justifyContent='center'
       >
@@ -19,27 +24,55 @@ export const HomeView = () => {
               title='ricardojrmcom'
               responsive
               sx={{
-                maxWidth: '540px',
+                maxWidth: '480px',
               }}
             />
           </Box>
           <Box textAlign='center' mb={3}>
             <Subtitle1 paragraph>@ricardojrmcom</Subtitle1>
-            <Subtitle2 paragraph>
-              Fulfilling Web Development and Frontend Engineering for digital
-              products
-            </Subtitle2>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={6}>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
               fullWidth
-              external
-              title='Project Discovery Call (Free)'
+              title='About me'
               href='https://ricardojrmcom.gumroad.com/l/project-call'
             >
-              Project Discovery Call (Free)
+              About me
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='About me'
+              href='https://ricardojrmcom.gumroad.com/l/project-call'
+            >
+              About me
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='About me'
+              href='https://ricardojrmcom.gumroad.com/l/project-call'
+            >
+              About me
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='About me'
+              href='https://ricardojrmcom.gumroad.com/l/project-call'
+            >
+              About me
             </LinkButton>
           </Box>
         </Grid>

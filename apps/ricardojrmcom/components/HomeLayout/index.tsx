@@ -1,6 +1,6 @@
 import { Layout, Header, Footer } from 'ui';
+import { APP } from '../../cfg/app';
 import { Logo } from '../Logo';
-import { Widgets } from '../Widgets';
 
 export interface HomeLayoutProps {
   children?: React.ReactNode;
@@ -14,13 +14,17 @@ export const HomeLayout = ({ children }: HomeLayoutProps) => {
         from: '#000000ea',
         to: '#1d1c1fea',
       }}
-      header={
-        <Header transparent home={<Logo />}>
-          <Widgets />
-        </Header>
-      }
+      header={<Header transparent home={<Logo />} />}
       footer={
-        <Footer transparent copyrightMsg='Copyright © devdigital.xyz 2022' />
+        <Footer
+          transparent
+          copyrightMsg={APP.copyright}
+          socials={{
+            brandName: APP.brandName,
+            github: true,
+            twitter: true,
+          }}
+        />
       }
     >
       {children}
