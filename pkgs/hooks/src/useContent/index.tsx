@@ -107,6 +107,7 @@ export const ContentProvider = ({
 
     // search items
     if (search.length) {
+      console.log(search);
       return Object.values(items).filter((item) => {
         return (
           item.title.toLowerCase().includes(search.toLowerCase()) ||
