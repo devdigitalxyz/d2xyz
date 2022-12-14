@@ -1,6 +1,8 @@
 import React from 'react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import { UiProvider } from 'ui/src/utils/UiProvider';
+import { ContentProvider } from '../../hooks/src/useContent';
+import { books } from '../mocks/books';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -16,4 +18,12 @@ export const parameters = {
   },
 };
 
-export const decorators = [(Story) => <UiProvider>{Story()}</UiProvider>];
+export const decorators = [
+  (Story) => (
+    <UiProvider>
+      <ContentProvider items={books} tags={['marketing', 'sales']}>
+        {Story()}
+      </ContentProvider>
+    </UiProvider>
+  ),
+];

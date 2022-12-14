@@ -10,7 +10,10 @@ export default {
 } as Meta;
 
 export const Default: Story<FooterProps> = () => (
-  <Footer copyrightMsg='Copyright © devdigital.xyz 2022' />
+  <Footer
+    copyrightMsg='Copyright © devdigital.xyz 2022'
+    socials={{ github: true, twitter: true }}
+  />
 );
 
 export const Transparent: Story<FooterProps> = () => (
@@ -19,12 +22,10 @@ export const Transparent: Story<FooterProps> = () => (
       background: 'black',
     }}
   >
-    <Footer transparent copyrightMsg='Copyright © devdigital.xyz 2022' />
+    <Footer
+      transparent
+      copyrightMsg='Copyright © devdigital.xyz 2022'
+      socials={{ github: true }}
+    />
   </div>
-);
-
-export const WithChildren: Story<FooterProps> = () => (
-  <Footer copyrightMsg='Copyright © devdigital.xyz 2022'>
-    <div>CHILD</div>
-  </Footer>
 );

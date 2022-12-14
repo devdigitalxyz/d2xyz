@@ -12,15 +12,11 @@ export default {
 } as Meta;
 
 export const Default: Story<ImageProps> = () => (
-  <Image src={'/static/v1/img/placeholder.png'} alt='Placeholder' />
+  <Image src={'/static/img/placeholder.png'} alt='Placeholder' />
 );
 
 export const Responsive: Story<ImageProps> = () => (
   <div style={{ maxHeight: '120px' }}>
-    <Image
-      src={'/static/v1/img/placeholder.png'}
-      alt='Placeholder'
-      responsive
-    />
+    <Image src={'/static/img/placeholder.png'} alt='Placeholder' responsive />
   </div>
 );
