@@ -6,7 +6,6 @@ import React, {
   createContext,
   useContext,
   type ReactNode,
-  useEffect,
 } from 'react';
 
 export type ContentOrderByType = 'date' | 'title';
