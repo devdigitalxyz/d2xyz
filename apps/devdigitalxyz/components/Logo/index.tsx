@@ -4,7 +4,7 @@ export const Logo = () => (
   <LinkButton href='/' title='devdigitalxyz'>
     <Image
       responsive
-      alt='Logo'
+      alt='D2XYZ'
       src='/static/img/devdigitalxyz-logo-alpha.png'
       sx={{ maxHeight: '39px' }}
     />

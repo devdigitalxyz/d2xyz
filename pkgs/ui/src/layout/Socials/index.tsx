@@ -17,7 +17,7 @@ export interface SocialsProps {
 }
 
 export const Socials = ({
-  brandName = 'devdigitalxyz',
+  brandName,
   facebook,
   github,
   instagram,
