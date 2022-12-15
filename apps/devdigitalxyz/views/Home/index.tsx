@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1, Subtitle2 } from 'ui';
+import { Image, LinkButton, Subtitle1 } from 'ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {

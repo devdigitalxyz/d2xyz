@@ -33,7 +33,7 @@ export const HomeView = () => {
               Building a portfolio of one-person businesses
             </Subtitle1>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='outlined'
@@ -54,7 +54,7 @@ export const HomeView = () => {
             >
               Books
             </LinkButton>
-          </Box>
+          </Box> */}
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
@@ -66,7 +66,7 @@ export const HomeView = () => {
               Services
             </LinkButton>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='outlined'
@@ -76,7 +76,7 @@ export const HomeView = () => {
             >
               About me
             </LinkButton>
-          </Box>
+          </Box> */}
         </Grid>
       </Grid>
     </HomeLayout>

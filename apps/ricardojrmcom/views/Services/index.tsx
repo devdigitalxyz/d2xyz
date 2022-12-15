@@ -1,10 +1,12 @@
 import { Grid, Box } from '@mui/material';
 import { Image, LinkButton, Subtitle1 } from 'ui';
+import { MetaTags } from 'ui/src/utils';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const ServicesView = () => {
   return (
     <HomeLayout>
+      <MetaTags title='Services | Ricardo Mota' />
       <Grid
         container
         sx={{
@@ -36,7 +38,19 @@ export const ServicesView = () => {
               color='secondary'
               variant='outlined'
               fullWidth
-              title='About me'
+              title='Frontend Engineering'
+              external
+              href='https://www.devdigital.xyz/'
+            >
+              Frontend Engineering
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='outlined'
+              fullWidth
+              title='Web Development'
               external
               href='https://www.devdigital.xyz/'
             >

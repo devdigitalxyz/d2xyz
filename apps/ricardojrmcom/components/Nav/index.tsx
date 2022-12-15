@@ -5,7 +5,7 @@ export const Nav = () => {
   return (
     <MenuIcon sx={{ color: '#fff' }} labels={{ tooltip: 'Navigation' }}>
       <Box>
-        <Box>
+        {/* <Box>
           <LinkButton fullWidth href='/blog'>
             Blog
           </LinkButton>
@@ -14,17 +14,17 @@ export const Nav = () => {
           <LinkButton fullWidth href='/books'>
             Books
           </LinkButton>
-        </Box>
+        </Box> */}
         <Box>
           <LinkButton fullWidth href='/services'>
             Services
           </LinkButton>
         </Box>
-        <Box>
+        {/* <Box>
           <LinkButton fullWidth href='/about'>
             About me
           </LinkButton>
-        </Box>
+        </Box> */}
       </Box>
     </MenuIcon>
   );
