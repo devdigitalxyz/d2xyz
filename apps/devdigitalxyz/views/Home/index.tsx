@@ -24,11 +24,10 @@ export const HomeView = () => {
             />
           </Box>
           <Box textAlign='center' mb={3}>
-            <Subtitle1 paragraph>@devdigitalxyz</Subtitle1>
-            <Subtitle2 paragraph>
+            <Subtitle1 paragraph>
               Fulfilling Web Development and Frontend Engineering for digital
               products
-            </Subtitle2>
+            </Subtitle1>
           </Box>
           <Box textAlign='center' my={1.5}>
             <LinkButton
@@ -36,13 +35,13 @@ export const HomeView = () => {
               variant='contained'
               fullWidth
               external
-              title='Project Discovery Call (Free)'
-              href='https://ricardojrmcom.gumroad.com/l/project-call'
+              title='Book a Project Discovery call'
+              href='https://calendly.com/ricardojrmcom/web-development-discovery'
             >
-              Project Discovery Call (Free)
+              Book a Project Discovery call
             </LinkButton>
           </Box>
-          <Box textAlign='center' my={1.5}>
+          {/* <Box textAlign='center' my={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
@@ -77,7 +76,7 @@ export const HomeView = () => {
             >
               Marketing Website 🔥
             </LinkButton>
-          </Box>
+          </Box> */}
         </Grid>
       </Grid>
     </HomeLayout>

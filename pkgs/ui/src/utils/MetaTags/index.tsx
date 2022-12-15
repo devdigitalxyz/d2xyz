@@ -12,12 +12,12 @@ export type MetaTagsProps = {
 };
 
 export const MetaTags = ({
-  title = 'D2XYZ',
-  description = 'Fulfilling Web Development and Frontend Engineering for digital products',
-  favicon = '/static/img/devdigitalxyz-logo.png',
-  ogimg = '/static/img/devdigitalxyz-ogimg.png',
-  author = 'author',
-  keywords = 'keywords',
+  title,
+  description,
+  favicon,
+  ogimg,
+  author,
+  keywords,
   app,
 }: MetaTagsProps) => {
   const { palette } = useTheme();

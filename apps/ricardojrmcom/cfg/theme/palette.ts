@@ -7,9 +7,4 @@ export const palette: ThemeOptions['palette'] = {
   secondary: {
     main: '#fff',
   },
-  // success: {},
-  // info: {},
-  // warning: {},
-  // error: {},
-  // background: {},
 };

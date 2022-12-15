@@ -8,15 +8,23 @@ export interface LinkIconProps
   extends Pick<LinkProps, 'href' | 'external' | 'children' | 'title'> {
   tooltip?: string;
   icon?: React.ReactNode;
+  noTooltip?: boolean;
 }
 
 export const LinkIcon = ({
   tooltip = 'Navigation',
   icon,
   children,
+  noTooltip,
   ...props
 }: LinkIconProps) => {
-  return (
+  return noTooltip ? (
+    <Link {...props}>
+      <IconButton size='small'>
+        {icon || children || <MuiLinkIcon />}
+      </IconButton>
+    </Link>
+  ) : (
     <Link {...props}>
       <Tooltip title={tooltip}>
         <IconButton size='small'>
