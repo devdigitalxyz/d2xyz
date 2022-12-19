@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import {
   Box,
   Paper,
@@ -11,6 +11,7 @@ import {
   AccordionDetails,
 } from '@mui/material';
 import { useLocalState } from 'hooks';
+import { stringCapitalize } from 'scripts';
 import { useContent } from '../useContent';
 import FilterListIcon from '@mui/icons-material/FilterList';
 
@@ -25,25 +26,39 @@ export const CMSCtrl = () => {
     tags,
     viewOptSet,
     viewOpt,
+    filters,
+    filtersSet,
   } = useContent();
 
   const updateText = useCallback(
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      // TODO: Fix TS error
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      searchSet(e.target.value); // TODO
+      searchSet(e.target.value);
     },
     [searchSet],
   );
 
-  const [expanded, setExpanded] = useLocalState<string | false>(
+  const handleFilters = useCallback(
+    (tag: string) => {
+      if (filters.includes(tag)) {
+        filtersSet(filters.filter((f) => f !== tag));
+      } else {
+        filtersSet([...filters, tag]);
+      }
+    },
+    [filters, filtersSet],
+  );
+
+  const [expanded, expandedSet] = useLocalState<string | false>(
     false,
     'expand-search',
   );
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false);
+      expandedSet(isExpanded ? panel : false);
     };
 
   return (
@@ -209,10 +224,46 @@ export const CMSCtrl = () => {
                   </Grid>
                 </Box>
                 <Box pt={1}>
-                  {
-                    // map tags
-                    // TODO
-                  }
+                  <Grid container alignItems='center' spacing={2}>
+                    {
+                      // filter tags
+                      Object.entries(tags).map(([key, value]) => {
+                        return (
+                          <Grid item key={key}>
+                            <Box>
+                              <Box>
+                                <Typography variant='body2'>
+                                  {stringCapitalize(key, true)}
+                                </Typography>
+                              </Box>
+                              <Box>
+                                <Grid container spacing={1}>
+                                  {value.map((tag) => {
+                                    return (
+                                      <Grid item key={`${key}-${tag}`}>
+                                        <Button
+                                          size='small'
+                                          color='primary'
+                                          variant={
+                                            filters.includes(tag)
+                                              ? 'contained'
+                                              : 'outlined'
+                                          }
+                                          onClick={() => handleFilters(tag)}
+                                        >
+                                          {stringCapitalize(tag, true)}
+                                        </Button>
+                                      </Grid>
+                                    );
+                                  })}
+                                </Grid>
+                              </Box>
+                            </Box>
+                          </Grid>
+                        );
+                      })
+                    }
+                  </Grid>
                 </Box>
               </Box>
             </AccordionDetails>

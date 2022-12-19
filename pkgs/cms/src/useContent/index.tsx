@@ -8,8 +8,8 @@ import React, {
   type ReactNode,
 } from 'react';
 
-export type ContentsortByType = 'date' | 'title' | 'position';
-export type ContentsortByOpts = 'asc' | 'desc';
+export type ContentSortByType = 'date' | 'title' | 'position';
+export type ContentSortByOpts = 'asc' | 'desc';
 export type ContentViewOpts = 'items' | 'collections';
 
 export type ContentItem = {
@@ -47,13 +47,13 @@ export interface ContentContextType {
   tags: {
     [x: string]: string[];
   };
-  sortBy: ContentsortByType;
-  sortDir: ContentsortByOpts;
+  sortBy: ContentSortByType;
+  sortDir: ContentSortByOpts;
   search: string;
   filters: string[];
   filtersSet: Dispatch<SetStateAction<string[]>>;
-  sortBySet: Dispatch<SetStateAction<ContentsortByType>>;
-  sortDirSet: Dispatch<SetStateAction<ContentsortByOpts>>;
+  sortBySet: Dispatch<SetStateAction<ContentSortByType>>;
+  sortDirSet: Dispatch<SetStateAction<ContentSortByOpts>>;
   searchSet: Dispatch<SetStateAction<string>>;
   viewOpt: ContentViewOpts;
   viewOptSet: React.Dispatch<React.SetStateAction<ContentViewOpts>>;

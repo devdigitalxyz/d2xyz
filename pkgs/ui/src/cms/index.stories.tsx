@@ -3,9 +3,9 @@ import type { Meta } from '@storybook/react';
 import { CMS } from 'cms';
 
 export default {
-  title: 'CMS/Component',
+  title: 'CMS/Overlay',
   parameters: {
-    componentSubtitle: 'ContentManagement Component',
+    componentSubtitle: 'ContentManagement Overlay',
   },
 } as Meta;
 
