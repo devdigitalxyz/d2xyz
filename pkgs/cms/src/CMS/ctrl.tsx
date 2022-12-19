@@ -151,7 +151,7 @@ export const CMSCtrl = () => {
                         <Typography variant='body2'>View Options</Typography>
                       </Box>
                       <Box>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={0.5}>
                           <Grid item>
                             <Button
                               size='small'
@@ -188,7 +188,7 @@ export const CMSCtrl = () => {
                         <Typography variant='body2'>Sort By</Typography>
                       </Box>
                       <Box>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={0.5}>
                           <Grid item>
                             <Button
                               size='small'
@@ -235,7 +235,7 @@ export const CMSCtrl = () => {
                         <Typography variant='body2'>Sort Direction</Typography>
                       </Box>
                       <Box>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={0.5}>
                           <Grid item>
                             <Button
                               size='small'
@@ -280,7 +280,7 @@ export const CMSCtrl = () => {
                               </Typography>
                             </Box>
                             <Box>
-                              <Grid container spacing={1}>
+                              <Grid container spacing={0.5}>
                                 {value.map((tag) => {
                                   return (
                                     <Grid item key={`${key}-${tag}`}>
