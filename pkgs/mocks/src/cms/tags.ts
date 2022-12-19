@@ -1,3 +1,5 @@
 export const tags = {
-  tags: ['characters', 'fantasy', 'concept'],
+  type: ['characters', 'landscapes'],
+  genre: ['fantasy', 'gaming'],
+  style: ['pixel'],
 };

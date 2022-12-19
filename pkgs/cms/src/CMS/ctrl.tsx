@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import {
   Box,
-  Paper,
   Grid,
   Button,
   Typography,
@@ -28,6 +27,7 @@ export const CMSCtrl = () => {
     viewOpt,
     filters,
     filtersSet,
+    lsid,
   } = useContent();
 
   const updateText = useCallback(
@@ -53,7 +53,7 @@ export const CMSCtrl = () => {
 
   const [expanded, expandedSet] = useLocalState<boolean>(
     false,
-    'expand-search',
+    `${lsid}-showfilters`,
   );
 
   const toggleExpanded = useCallback(() => {
@@ -64,7 +64,7 @@ export const CMSCtrl = () => {
     <Box>
       <Box p={1}>
         <Grid container alignItems='center' spacing={1}>
-          <Grid item xs={8} md={9} lg={10} xl={11}>
+          <Grid item xs={8} md={9} lg={10}>
             <TextField
               type='text'
               fullWidth
@@ -75,9 +75,9 @@ export const CMSCtrl = () => {
               size='small'
             />
           </Grid>
-          <Grid item xs={4} md={3} lg={2} xl={1}>
+          <Grid item xs={4} md={3} lg={2}>
             <Button
-              variant='text'
+              variant='contained'
               fullWidth
               startIcon={<FilterListIcon />}
               onClick={toggleExpanded}

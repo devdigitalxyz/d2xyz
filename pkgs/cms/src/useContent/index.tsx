@@ -7,6 +7,7 @@ import React, {
   useContext,
   type ReactNode,
 } from 'react';
+import { useLocalState } from 'hooks';
 
 export type ContentSortByType = 'date' | 'title' | 'position';
 export type ContentSortByOpts = 'asc' | 'desc';
@@ -57,6 +58,7 @@ export interface ContentContextType {
   searchSet: Dispatch<SetStateAction<string>>;
   viewOpt: ContentViewOpts;
   viewOptSet: React.Dispatch<React.SetStateAction<ContentViewOpts>>;
+  lsid?: string;
 }
 
 const init: ContentContextType = {
@@ -73,6 +75,7 @@ const init: ContentContextType = {
   searchSet: () => undefined,
   viewOpt: 'items',
   viewOptSet: () => undefined,
+  lsid: 'd2xyz-cms',
 };
 
 export const ContentContext = createContext<ContentContextType>(init);
@@ -81,23 +84,31 @@ export interface ContentProviderProps {
   children?: ReactNode;
   content?: ContentContextType['content'];
   tags?: ContentContextType['tags'];
+  lsid?: string;
 }
 
 export const ContentProvider = ({
   children,
   content = init.content,
   tags = init.tags,
+  lsid = init.lsid,
 }: ContentProviderProps) => {
   // states
-  const [viewOpt, viewOptSet] = useState<ContentViewOpts>(init.viewOpt);
-  const [filters, filtersSet] = useState<ContentContextType['filters']>(
+  const [viewOpt, viewOptSet] = useLocalState<ContentViewOpts>(
+    init.viewOpt,
+    `${lsid}-opt`,
+  );
+  const [filters, filtersSet] = useLocalState<ContentContextType['filters']>(
     init.filters,
+    `${lsid}-filters`,
   );
-  const [sortBy, sortBySet] = useState<ContentContextType['sortBy']>(
+  const [sortBy, sortBySet] = useLocalState<ContentContextType['sortBy']>(
     init.sortBy,
+    `${lsid}-sortby`,
   );
-  const [sortDir, sortDirSet] = useState<ContentContextType['sortDir']>(
+  const [sortDir, sortDirSet] = useLocalState<ContentContextType['sortDir']>(
     init.sortDir,
+    `${lsid}-sortdir`,
   );
   const [search, searchSet] = useState<ContentContextType['search']>(
     init.search,
