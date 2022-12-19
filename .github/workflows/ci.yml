@@ -39,8 +39,8 @@ jobs:
       # - name: Install Browsers
       #   run: yarn test-install
 
-      # - name: Run Tests
-      #   run: yarn test
+      - name: Run Tests
+        run: yarn test
 
   release:
     name: Release Version
