@@ -1,7 +1,9 @@
-export { objToQuery, queryToObj } from './objQuery';
+export * from './objQuery';
 
-export { createEmotionCache } from './createEmotionCache';
+export * from './createEmotionCache';
 
-export { hexToRgb, rgbToHex } from './colorConverter';
+export * from './colorConverter';
 
-export { sleep } from './sleep';
+export * from './sleep';
+
+export * from './stringCapitalize';
