@@ -23,6 +23,7 @@ export type ContentItem = {
   premium?: boolean;
   position?: number;
   featured?: boolean;
+  body?: ReactNode;
 };
 
 export type ContentCollection = {
@@ -35,6 +36,7 @@ export type ContentCollection = {
   premium?: boolean;
   position?: number;
   featured?: boolean;
+  body?: ReactNode;
   items: ContentItem[];
 };
 

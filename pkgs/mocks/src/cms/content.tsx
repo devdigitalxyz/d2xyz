@@ -32,6 +32,7 @@ export const content: ContentRecord = {
         img: 'https://cdn.midjourney.com/570e1d25-2d64-4725-8812-2df44574c49f/grid_0.png',
         tags: ['landscapes', 'gaming', 'pixel'],
         position: 4000,
+        slug: '/green-hill-zone-4',
       },
       {
         title: 'Green Hill Zone #4',
