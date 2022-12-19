@@ -14,30 +14,25 @@ export const CMSContent = () => {
           return (
             <Grid item key={i}>
               <Paper>
-                <Link href='https://amzn.to/3FAm2Dw' external>
-                  <Box p={1}>
-                    <Box>
-                      <Typography
-                        textAlign='center'
-                        sx={{ fontWeight: 'bold' }}
-                      >
-                        {item.title}
-                      </Typography>
-                    </Box>
-                    <Box textAlign='center'>
-                      <Image
-                        src={item.img}
-                        sx={{ maxHeight: '300px' }}
-                        alt='book'
-                      />
-                    </Box>
-                    <Box>
-                      <Typography textAlign='center'>
-                        {dayjs(item.date).format('DD/MM/YYYY')}
-                      </Typography>
-                    </Box>
+                <Box p={1}>
+                  <Box>
+                    <Typography textAlign='center' sx={{ fontWeight: 'bold' }}>
+                      {item.title}
+                    </Typography>
                   </Box>
-                </Link>
+                  <Box textAlign='center'>
+                    <Image
+                      src={item.img}
+                      sx={{ maxHeight: '300px' }}
+                      alt='book'
+                    />
+                  </Box>
+                  <Box>
+                    <Typography textAlign='center'>
+                      {dayjs(item.date).format('DD/MM/YYYY')}
+                    </Typography>
+                  </Box>
+                </Box>
               </Paper>
             </Grid>
           );

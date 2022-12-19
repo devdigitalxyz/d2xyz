@@ -2,7 +2,7 @@ import React from 'react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import { UiProvider } from 'ui/src/utils/UiProvider';
 import { ContentProvider } from 'cms';
-import { content } from 'mocks';
+import { content, tags } from 'mocks';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,10 +21,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <UiProvider>
-      <ContentProvider
-        content={content}
-        tags={{ tags: ['marketing', 'sales'] }}
-      >
+      <ContentProvider content={content} tags={tags}>
         {Story()}
       </ContentProvider>
     </UiProvider>
