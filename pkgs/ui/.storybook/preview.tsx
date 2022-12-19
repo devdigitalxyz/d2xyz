@@ -21,7 +21,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <UiProvider>
-      <ContentProvider content={content} tags={tags}>
+      <ContentProvider content={content} tags={tags} lsid='sb-demo-d2xyz'>
         {Story()}
       </ContentProvider>
     </UiProvider>

@@ -13,6 +13,7 @@ import { useLocalState } from 'hooks';
 import { stringCapitalize } from 'scripts';
 import { useContent } from '../useContent';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import ClearIcon from '@mui/icons-material/Clear';
 
 export const CMSCtrl = () => {
   const {
@@ -50,6 +51,9 @@ export const CMSCtrl = () => {
     },
     [filters, filtersSet],
   );
+  const clearFilters = useCallback(() => {
+    filtersSet([]);
+  }, [filtersSet]);
 
   const [expanded, expandedSet] = useLocalState<boolean>(
     false,
@@ -64,7 +68,7 @@ export const CMSCtrl = () => {
     <Box>
       <Box p={1}>
         <Grid container alignItems='center' spacing={1}>
-          <Grid item xs={8} md={9} lg={10}>
+          <Grid item xs={6} sm={7} md={9} lg={10}>
             <TextField
               type='text'
               fullWidth
@@ -75,15 +79,60 @@ export const CMSCtrl = () => {
               size='small'
             />
           </Grid>
-          <Grid item xs={4} md={3} lg={2}>
-            <Button
-              variant='contained'
-              fullWidth
-              startIcon={<FilterListIcon />}
-              onClick={toggleExpanded}
+          <Grid
+            item
+            xs={6}
+            sm={5}
+            md={3}
+            lg={2}
+            container
+            alignItems='center'
+            spacing={0.5}
+          >
+            <Grid item xs={filters.length > 0 ? 7 : 12}>
+              <Box display={{ xs: 'block', sm: 'none' }}>
+                <Button variant='contained' fullWidth onClick={toggleExpanded}>
+                  <FilterListIcon />
+                </Button>
+              </Box>
+              <Box display={{ xs: 'none', sm: 'block' }}>
+                <Button
+                  variant='contained'
+                  fullWidth
+                  startIcon={<FilterListIcon />}
+                  onClick={toggleExpanded}
+                >
+                  Filters
+                </Button>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              sx={{ display: filters.length > 0 ? 'block' : 'none' }}
+              xs={5}
             >
-              Filters
-            </Button>
+              <Box display={{ xs: 'block', sm: 'none' }}>
+                <Button
+                  variant='contained'
+                  color='error'
+                  fullWidth
+                  onClick={clearFilters}
+                >
+                  <ClearIcon />
+                </Button>
+              </Box>
+              <Box display={{ xs: 'none', sm: 'block' }}>
+                <Button
+                  variant='contained'
+                  color='error'
+                  fullWidth
+                  startIcon={<ClearIcon />}
+                  onClick={clearFilters}
+                >
+                  Clear
+                </Button>
+              </Box>
+            </Grid>
           </Grid>
         </Grid>
       </Box>
