@@ -23,7 +23,7 @@ export const decorators = [
     <UiProvider>
       <ContentProvider
         content={content}
-        tags={{ marketing: ['Marketing', 'Sales'] }}
+        tags={{ marketing: ['marketing', 'sales'] }}
       >
         {Story()}
       </ContentProvider>
