@@ -11,7 +11,6 @@
     "build-sb": "build-storybook -s ./public"
   },
   "dependencies": {
-    "cms": "*",
     "hooks": "*",
     "mocks": "*",
     "scripts": "*"

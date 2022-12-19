@@ -1,4 +1,4 @@
-import { type ContentRecord } from 'cms';
+import { type ContentRecord } from '../../../cms';
 
 export const content: ContentRecord = {
   landscapes: {

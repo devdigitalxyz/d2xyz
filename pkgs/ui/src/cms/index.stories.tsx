@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta } from '@storybook/react';
-import { CMS } from 'cms';
+import { CMS } from '../../../cms/src';
 
 export default {
   title: 'CMS/Overlay',
