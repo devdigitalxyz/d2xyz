@@ -13,6 +13,8 @@ export default {
   },
 } as Meta;
 
+// TODO: Fix Story
+
 export const Default: Story = () => {
   const theme = useTheme();
   const { r, g, b } = hexToRgb(theme.palette.primary.main);
