@@ -13,6 +13,7 @@ type ObjToQueryType = <T>(obj: T | ObjectType) => string;
 export const objToQuery: ObjToQueryType = (obj) => {
   let str = '?';
 
+  // TODO: Fix TS error
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   Object.entries(obj).forEach((entry) => {
