@@ -3,6 +3,9 @@ import { LinkIcon } from 'ui';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 
 export interface SocialsProps {
   brandName?: string;
@@ -22,12 +25,12 @@ export const Socials = ({
   github,
   instagram,
   pinterest,
-  tiktok,
+  // tiktok,
   twitter,
   linkedin,
   linkedinOverride,
 }: SocialsProps) => (
-  <Grid container alignItems='center' justifyContent='center' spacing={1}>
+  <Grid container alignItems='center' justifyContent='center'>
     {twitter && (
       <Grid item>
         <LinkIcon
@@ -38,6 +41,45 @@ export const Socials = ({
           noTooltip
         >
           <TwitterIcon sx={{ color: '#fff', fontSize: '42px' }} />
+        </LinkIcon>
+      </Grid>
+    )}
+    {facebook && (
+      <Grid item>
+        <LinkIcon
+          external
+          href={`https://facebook.com/${brandName}`}
+          tooltip='Facebook'
+          title={`${brandName} on Facebook`}
+          noTooltip
+        >
+          <FacebookIcon sx={{ color: '#fff', fontSize: '42px' }} />
+        </LinkIcon>
+      </Grid>
+    )}
+    {instagram && (
+      <Grid item>
+        <LinkIcon
+          external
+          href={`https://instagram.com/${brandName}`}
+          tooltip='Instagram'
+          title={`${brandName} on Instagram`}
+          noTooltip
+        >
+          <InstagramIcon sx={{ color: '#fff', fontSize: '42px' }} />
+        </LinkIcon>
+      </Grid>
+    )}
+    {pinterest && (
+      <Grid item>
+        <LinkIcon
+          external
+          href={`https://pinterest.com/${brandName}`}
+          tooltip='Pinterest'
+          title={`${brandName} on Pinterest`}
+          noTooltip
+        >
+          <PinterestIcon sx={{ color: '#fff', fontSize: '42px' }} />
         </LinkIcon>
       </Grid>
     )}

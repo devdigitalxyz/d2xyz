@@ -22,6 +22,9 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
           socials={{
             brandName: APP.brandName,
             github: false,
+            instagram: true,
+            facebook: true,
+            pinterest: true,
             twitter: true,
             linkedin: true,
             linkedinOverride: 'https://www.linkedin.com/company/rjdreamwithart',

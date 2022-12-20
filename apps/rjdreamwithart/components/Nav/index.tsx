@@ -5,26 +5,21 @@ export const Nav = () => {
   return (
     <MenuIcon sx={{ color: '#fff' }} labels={{ tooltip: 'Navigation' }}>
       <Box>
-        {/* <Box>
-          <LinkButton fullWidth href='/blog'>
-            Blog
-          </LinkButton>
-        </Box>
-        <Box>
-          <LinkButton fullWidth href='/books'>
-            Books
-          </LinkButton>
-        </Box> */}
         <Box>
           <LinkButton fullWidth href='/collections' title='Gallery'>
             Gallery
           </LinkButton>
         </Box>
-        {/* <Box>
-          <LinkButton fullWidth href='/about'>
-            About me
+        <Box>
+          <LinkButton fullWidth href='/socials' title='Socials'>
+            Socials
           </LinkButton>
-        </Box> */}
+        </Box>
+        <Box>
+          <LinkButton fullWidth href='/credits' title='Credits'>
+            Credits
+          </LinkButton>
+        </Box>
       </Box>
     </MenuIcon>
   );

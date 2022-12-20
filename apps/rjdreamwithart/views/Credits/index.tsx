@@ -2,7 +2,7 @@ import { Grid, Box } from '@mui/material';
 import { Image, LinkButton, Subtitle1 } from 'ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
-export const HomeView = () => {
+export const CreditsView = () => {
   return (
     <HomeLayout>
       <Grid
@@ -25,45 +25,24 @@ export const HomeView = () => {
                 title='rjdreamwithart'
                 responsive
                 sx={{
-                  maxWidth: '600px',
+                  maxWidth: '450px',
                 }}
               />
             </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
-            <Subtitle1 paragraph>The Best AI Artwork</Subtitle1>
+            <Subtitle1 paragraph>Credits</Subtitle1>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
               fullWidth
-              title='Gallery'
-              href='/collections'
+              external
+              href='https://www.ricardojrm.com/'
+              title='Business Development'
             >
-              Gallery
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              title='Socials'
-              href='/socials'
-            >
-              Socials
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              title='Credits'
-              href='/credits'
-            >
-              Credits
+              Business Development
             </LinkButton>
           </Box>
         </Grid>
