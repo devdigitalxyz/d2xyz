@@ -5,9 +5,11 @@
       "dependsOn": [
         "^build",
         "$NEXT_PUBLIC_GA_DEVDIGITALXYZ",
-        "$NEXT_PUBLIC_MSC_RICARDOJRMCOM",
+        "$NEXT_PUBLIC_MSC_DEVDIGITALXYZ",
         "$NEXT_PUBLIC_GA_RICARDOJRMCOM",
-        "$NEXT_PUBLIC_GA_GHOSTCOPYNET"
+        "$NEXT_PUBLIC_MSC_RICARDOJRMCOM",
+        "$NEXT_PUBLIC_GA_GHOSTCOPYNET",
+        "$NEXT_PUBLIC_MSC_GHOSTCOPYNET"
       ],
       "outputs": ["dist/**", ".next/**"]
     },
