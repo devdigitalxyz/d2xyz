@@ -7,8 +7,8 @@ import { theme } from '../cfg/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_RICARDOJRMCOM || '';
-const MSC_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MSC_RICARDOJRMCOM || '';
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_RJDREAMWITHART || '';
+const MSC_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MSC_RJDREAMWITHART || '';
 
 interface UiAppProps extends AppProps {
   emotionCache?: EmotionCache;
