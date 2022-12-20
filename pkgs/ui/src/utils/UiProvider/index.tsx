@@ -32,6 +32,7 @@ export const UiContext = createContext<UiContextType>(init);
 
 export interface UiProviderProps {
   children: ReactNode;
+  MSC_MEASUREMENT_ID?: string;
   GA_MEASUREMENT_ID?: string;
   THEME?: ThemeOptions;
   META?: MetaTagsProps;
@@ -39,6 +40,7 @@ export interface UiProviderProps {
 
 export const UiProvider = ({
   children,
+  MSC_MEASUREMENT_ID,
   GA_MEASUREMENT_ID,
   THEME,
   META,
@@ -106,6 +108,19 @@ export const UiProvider = ({
                 gtag('js', new Date());
       
                 gtag('config', '${GA_MEASUREMENT_ID}');
+              `,
+            }}
+          />
+          <Script
+            id='msc'
+            strategy='afterInteractive'
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "${MSC_MEASUREMENT_ID}");
               `,
             }}
           />
