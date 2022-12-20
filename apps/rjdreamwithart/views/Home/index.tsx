@@ -36,10 +36,10 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='Services'
-              href='/services'
+              title='Gallery'
+              href='/collections'
             >
-              Services
+              Gallery
             </LinkButton>
           </Box>
         </Grid>

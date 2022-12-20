@@ -26,13 +26,12 @@ const UiApp: AppType = (props: UiAppProps) => {
         MSC_MEASUREMENT_ID={MSC_MEASUREMENT_ID}
         THEME={theme}
         META={{
-          title: 'Ricardo Mota',
-          description:
-            'Building a portfolio of one-person businesses by myself.',
-          author: 'Ricardo Mota (@rjdreamwithart)',
+          title: 'Dream With Art',
+          description: 'The Best AI Artwork.',
+          author: 'Dream With Art (@rjdreamwithart)',
           favicon: '/static/img/rjdreamwithart-logo.png',
           ogimg: '/static/img/rjdreamwithart-logo.png',
-          keywords: 'business',
+          keywords: 'art, concept art, character design',
         }}
       >
         <AnyComponent {...pageProps} />

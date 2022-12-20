@@ -13,7 +13,8 @@ export const HomeLayout = ({ children }: HomeLayoutProps) => {
       bgVideo='static/vid/rjdreamwithart-bg.mp4'
       bgGradient={{
         from: '#2A293Bfa',
-        to: '#2A293Bea',
+        to: '#2a293bab',
+        // to: '#2A293Bea',
       }}
       header={
         <Header transparent home={<Logo />}>

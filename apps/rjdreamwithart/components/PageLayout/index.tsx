@@ -21,9 +21,10 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
           copyrightMsg={APP.copyright}
           socials={{
             brandName: APP.brandName,
-            github: true,
+            github: false,
             twitter: true,
             linkedin: true,
+            linkedinOverride: 'https://www.linkedin.com/company/rjdreamwithart',
           }}
         />
       }

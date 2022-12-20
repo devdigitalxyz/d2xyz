@@ -1,11 +1,11 @@
 import { Image, LinkButton } from 'ui';
 
 export const Logo = () => (
-  <LinkButton href='/' title='Ricardo Mota'>
+  <LinkButton href='/' title='Dream With Art'>
     <Image
       responsive
-      title='Ricardo Mota'
-      alt='Ricardo Mota'
+      title='Dream With Art'
+      alt='Dream With Art'
       src='/static/img/rjdreamwithart-logo-alpha.png'
       sx={{ maxHeight: '39px' }}
     />
