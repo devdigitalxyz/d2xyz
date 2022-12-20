@@ -9,7 +9,9 @@
         "$NEXT_PUBLIC_GA_RICARDOJRMCOM",
         "$NEXT_PUBLIC_MSC_RICARDOJRMCOM",
         "$NEXT_PUBLIC_GA_GHOSTCOPYNET",
-        "$NEXT_PUBLIC_MSC_GHOSTCOPYNET"
+        "$NEXT_PUBLIC_MSC_GHOSTCOPYNET",
+        "$NEXT_PUBLIC_GA_RJDREAMWITHART",
+        "$NEXT_PUBLIC_MSC_RJDREAMWITHART"
       ],
       "outputs": ["dist/**", ".next/**"]
     },
