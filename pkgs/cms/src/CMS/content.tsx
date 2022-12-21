@@ -10,11 +10,15 @@ export const CMSContent = () => {
   return (
     <Box mt={3} p={1}>
       <Grid container spacing={2} alignItems='center' justifyContent='center'>
-        {display.map((item, i) => {
+        {display.map((item) => {
           return (
-            <Grid item key={i}>
-              {item.slug ? (
-                <Link href={item.slug} title={item.title}>
+            <Grid item key={item.title}>
+              {item.slug || item.external ? (
+                <Link
+                  href={(item.slug || item.external) as string}
+                  external={!!item.external}
+                  title={item.title}
+                >
                   <CMSContentCard
                     title={item.title}
                     description={item.description}

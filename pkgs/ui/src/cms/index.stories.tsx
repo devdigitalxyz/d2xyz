@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta } from '@storybook/react';
-import { CMS } from '../../../cms/src';
+import { CMS, CMSContentOverview } from '../../../cms/src';
+import { content } from 'mocks';
 
 export default {
   title: 'CMS/Overlay',
@@ -9,4 +10,8 @@ export default {
   },
 } as Meta;
 
-export const Default = () => <CMS />;
+export const Layout = () => <CMS />;
+
+export const Overview = () => (
+  <CMSContentOverview item={content.landscapes.items[0]} />
+);

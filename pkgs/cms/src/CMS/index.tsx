@@ -3,6 +3,8 @@ import { Box } from '@mui/material';
 import { CMSCtrl } from './ctrl';
 import { CMSContent } from './content';
 
+export * from './overview';
+
 export const CMS = () => {
   return (
     <Box>

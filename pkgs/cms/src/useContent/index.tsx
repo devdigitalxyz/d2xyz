@@ -12,6 +12,7 @@ import { useLocalState } from 'hooks';
 export type ContentSortByType = 'date' | 'title' | 'position';
 export type ContentSortByOpts = 'asc' | 'desc';
 export type ContentViewOpts = 'items' | 'collections';
+export type ContentItemActions = [string, string];
 
 export type ContentItem = {
   title: string;
@@ -20,10 +21,13 @@ export type ContentItem = {
   img: string;
   date: Date;
   slug?: string;
+  external?: string;
   premium?: boolean;
   position?: number;
   featured?: boolean;
   body?: ReactNode;
+  items?: ContentItem[];
+  actions?: ContentItemActions[];
 };
 
 export type ContentCollection = {
@@ -33,11 +37,13 @@ export type ContentCollection = {
   img: string;
   date: Date;
   slug?: string;
+  external?: string;
   premium?: boolean;
   position?: number;
   featured?: boolean;
   body?: ReactNode;
   items: ContentItem[];
+  actions?: ContentItemActions[];
 };
 
 export type ContentRecord = {

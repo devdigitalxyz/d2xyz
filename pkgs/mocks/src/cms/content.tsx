@@ -11,16 +11,21 @@ export const content: ContentRecord = {
     items: [
       {
         title: 'Green Hill Zone #1',
-        description: '',
+        description: 'asd',
         date: new Date('11-02-2022'),
         img: 'https://cdn.midjourney.com/876605b9-ca9a-44be-9f1c-6cf540e00c25/grid_0.png',
         tags: ['landscapes', 'gaming', 'pixel'],
         position: 8000,
+        actions: [
+          ['Test 1', 'https://www.ricardojrm.com/'],
+          ['Test 2', 'https://www.ricardojrm.com/'],
+        ],
       },
       {
         title: 'Green Hill Zone #2',
         description: '',
         date: new Date('11-03-2022'),
+        external: 'https://www.ricardojrm.com/',
         img: 'https://cdn.midjourney.com/79330e54-4f81-4383-b934-47967e8052b3/grid_0.png',
         tags: ['landscapes', 'gaming', 'pixel'],
         position: 6000,
