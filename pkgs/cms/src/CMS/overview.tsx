@@ -23,7 +23,7 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
           </Body2>
           {item.description && <Body1 paragraph>{item.description}</Body1>}
           {item.actions && (
-            <Box pb={1}>
+            <Box>
               <Grid container alignItems='center' spacing={1}>
                 {item.actions.map((action) => (
                   <Grid item key={action[0]}>
@@ -44,8 +44,9 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
             <Grid
               container
               alignItems='center'
-              justifyContent='center'
+              justifyContent='space-between'
               spacing={2}
+              py={2}
             >
               {item.items.map((i) => (
                 <Grid item key={i.title}>
@@ -74,7 +75,7 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
               ))}
             </Grid>
           ) : (
-            <Box textAlign='center'>
+            <Box textAlign='center' py={2}>
               <Image
                 src={item.img}
                 alt={item.title}

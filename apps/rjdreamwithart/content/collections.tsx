@@ -11,6 +11,9 @@ export const collections: ContentRecord = {
     tags: ['fantasy', 'character', 'scholar'],
     position: 10000,
     link: '/collections/the-cleric',
+    actions: [
+      ['4K Resolution', 'https://ricardojrmcom.gumroad.com/l/the-cleric-4k'],
+    ],
     items: [
       {
         title: 'The Cleric #1',
@@ -20,6 +23,12 @@ export const collections: ContentRecord = {
         tags: ['fantasy', 'character', 'scholar', 'male'],
         link: '/collections/the-cleric/1',
         position: 10000,
+        actions: [
+          [
+            '4K Resolution',
+            'https://ricardojrmcom.gumroad.com/l/the-cleric-4k',
+          ],
+        ],
       },
       {
         title: 'The Cleric #2',
@@ -29,6 +38,12 @@ export const collections: ContentRecord = {
         tags: ['fantasy', 'character', 'scholar', 'female'],
         link: '/collections/the-cleric/2',
         position: 10000,
+        actions: [
+          [
+            '4K Resolution',
+            'https://ricardojrmcom.gumroad.com/l/the-cleric-4k',
+          ],
+        ],
       },
       {
         title: 'The Cleric #3',
@@ -38,6 +53,12 @@ export const collections: ContentRecord = {
         tags: ['fantasy', 'character', 'scholar', 'male'],
         link: '/collections/the-cleric/3',
         position: 10000,
+        actions: [
+          [
+            '4K Resolution',
+            'https://ricardojrmcom.gumroad.com/l/the-cleric-4k',
+          ],
+        ],
       },
     ],
   },

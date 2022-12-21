@@ -93,6 +93,7 @@ export const CMSCtrl = () => {
               <Box display={{ xs: 'block', sm: 'none' }}>
                 <Button variant='contained' fullWidth onClick={toggleExpanded}>
                   <FilterListIcon />
+                  {'‏'}
                 </Button>
               </Box>
               <Box display={{ xs: 'none', sm: 'block' }}>
@@ -111,27 +112,15 @@ export const CMSCtrl = () => {
               sx={{ display: filters.length > 0 ? 'block' : 'none' }}
               xs={5}
             >
-              <Box display={{ xs: 'block', sm: 'none' }}>
-                <Button
-                  variant='contained'
-                  color='error'
-                  fullWidth
-                  onClick={clearFilters}
-                >
-                  <ClearIcon />
-                </Button>
-              </Box>
-              <Box display={{ xs: 'none', sm: 'block' }}>
-                <Button
-                  variant='contained'
-                  color='error'
-                  fullWidth
-                  startIcon={<ClearIcon />}
-                  onClick={clearFilters}
-                >
-                  Clear
-                </Button>
-              </Box>
+              <Button
+                variant='contained'
+                color='error'
+                fullWidth
+                onClick={clearFilters}
+              >
+                <ClearIcon />
+                {'‏'}
+              </Button>
             </Grid>
           </Grid>
         </Grid>
