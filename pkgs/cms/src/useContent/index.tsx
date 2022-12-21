@@ -16,45 +16,30 @@ export type ContentItemActions = [string, string];
 
 export type ContentItem = {
   title: string;
-  description?: string;
   tags: string[];
   img: string;
   date: string;
-  slug?: string;
   link?: string;
+  description?: string;
+  slug?: string;
   external?: string;
   premium?: boolean;
   position?: number;
   featured?: boolean;
   body?: ReactNode;
-  items?: ContentItem[];
-  actions?: ContentItemActions[];
-};
-
-export type ContentCollection = {
-  title: string;
-  description?: string;
-  tags: string[];
-  img: string;
-  date: string;
-  slug?: string;
-  link?: string;
-  external?: string;
-  premium?: boolean;
-  position?: number;
-  featured?: boolean;
-  body?: ReactNode;
-  items: ContentItem[];
+  items?: {
+    [x: string]: ContentItem;
+  };
   actions?: ContentItemActions[];
 };
 
 export type ContentRecord = {
-  [x: string]: ContentCollection;
+  [x: string]: ContentItem;
 };
 
 export interface ContentContextType {
   content: ContentRecord;
-  display: ContentItem[] | ContentCollection[];
+  display: ContentItem[];
   tags: {
     [x: string]: string[];
   };
@@ -132,8 +117,11 @@ export const ContentProvider = ({
     }
     if (viewOpt === 'items') {
       filtered = Object.values(content).reduce(
-        (acc: ContentItem[], collection: ContentCollection) => {
-          const result: ContentItem[] = [...acc, ...collection.items];
+        (acc: ContentItem[], collection: ContentItem) => {
+          const result: ContentItem[] = [
+            ...acc,
+            ...Object.values(collection.items || {}),
+          ];
           return result;
         },
         [],

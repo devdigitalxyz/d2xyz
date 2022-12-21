@@ -92,7 +92,7 @@ export const Layout: FC<LayoutProps> = ({
         </Box>
       )}
 
-      {children && <Container>{children}</Container>}
+      {children && <Container maxWidth='xl'>{children}</Container>}
 
       {footer && (
         <Box

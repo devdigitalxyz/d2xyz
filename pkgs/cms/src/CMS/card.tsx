@@ -23,7 +23,7 @@ export const CMSContentCard = ({
       onMouseEnter={() => hoverSet(true)}
       onMouseLeave={() => hoverSet(false)}
     >
-      <Paper sx={{ maxWidth: '360px' }}>
+      <Paper sx={{ maxWidth: '355px' }}>
         <Box py={1}>
           <Grid
             pb={1}
@@ -42,7 +42,7 @@ export const CMSContentCard = ({
           </Grid>
           <Box
             textAlign='center'
-            sx={{ height: '360px', width: '360px' }}
+            sx={{ height: '355px', width: '355px' }}
             mx='auto'
           >
             {hover ? (

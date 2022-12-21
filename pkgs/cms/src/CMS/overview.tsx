@@ -2,11 +2,11 @@ import React from 'react';
 import { Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
 import { Image, Subtitle1, Body1, Body2, Link, LinkButton } from 'ui';
-import { type ContentCollection, type ContentItem } from '../useContent';
+import { type ContentItem } from '../useContent';
 import { CMSContentCard } from './card';
 
 export interface CMSContentOverviewProps {
-  item?: ContentCollection | ContentItem;
+  item?: ContentItem;
 }
 
 export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
@@ -44,11 +44,11 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
             <Grid
               container
               alignItems='center'
-              justifyContent='space-between'
+              justifyContent='center'
               spacing={2}
               py={2}
             >
-              {item.items.map((i) => (
+              {Object.values(item.items).map((i) => (
                 <Grid item key={i.title}>
                   {i.link || i.external ? (
                     <Link

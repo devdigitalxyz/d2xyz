@@ -29,10 +29,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // items
   Object.entries(collections).forEach((value) => {
-    value[1].items.forEach((_item, i) => {
+    Object.entries(value[1].items || {}).forEach((item) => {
+      const slugs = [value[0], `${item[0]}`];
       paths.push({
         params: {
-          slugs: [value[0], `${i + 1}`],
+          slugs,
         },
       });
     });
@@ -49,7 +50,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const id = (slugs ?? [])[0];
   const item = (slugs ?? [])[1];
   if (item) {
-    const result = slugs ? collections[id].items[parseInt(item) - 1] : {};
+    // TODO: Fix TS Error
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const result = slugs ? collections[id].items[item] : {};
     return {
       props: { result },
     };

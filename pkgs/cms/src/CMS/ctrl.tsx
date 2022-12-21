@@ -68,7 +68,7 @@ export const CMSCtrl = () => {
     <Box>
       <Box p={1}>
         <Grid container alignItems='center' spacing={1}>
-          <Grid item xs={6} sm={7} md={9} lg={10}>
+          <Grid item xs={7} md={9} xl={10}>
             <TextField
               type='text'
               fullWidth
@@ -81,29 +81,18 @@ export const CMSCtrl = () => {
           </Grid>
           <Grid
             item
-            xs={6}
-            sm={5}
+            xs={5}
             md={3}
-            lg={2}
+            xl={2}
             container
             alignItems='center'
             spacing={0.5}
           >
             <Grid item xs={filters.length > 0 ? 7 : 12}>
-              <Box display={{ xs: 'block', sm: 'none' }}>
+              <Box>
                 <Button variant='contained' fullWidth onClick={toggleExpanded}>
                   <FilterListIcon />
                   {'‏'}
-                </Button>
-              </Box>
-              <Box display={{ xs: 'none', sm: 'block' }}>
-                <Button
-                  variant='contained'
-                  fullWidth
-                  startIcon={<FilterListIcon />}
-                  onClick={toggleExpanded}
-                >
-                  Filters
                 </Button>
               </Box>
             </Grid>
