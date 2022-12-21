@@ -49,9 +49,9 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
             >
               {item.items.map((i) => (
                 <Grid item key={i.title}>
-                  {i.slug || i.external ? (
+                  {i.link || i.external ? (
                     <Link
-                      href={(i.slug || i.external) as string}
+                      href={(i.link || i.external) as string}
                       external={!!i.external}
                       title={i.title}
                     >
@@ -75,7 +75,12 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
             </Grid>
           ) : (
             <Box textAlign='center'>
-              <Image src={item.img} alt={item.title} title={item.title} />
+              <Image
+                src={item.img}
+                alt={item.title}
+                title={item.title}
+                responsive
+              />
             </Box>
           )}
         </Box>

@@ -7,7 +7,7 @@ export interface CMSContentCardProps {
   title: string;
   description?: string;
   img: string;
-  date: Date;
+  date: string;
 }
 
 export const CMSContentCard = ({
@@ -47,7 +47,7 @@ export const CMSContentCard = ({
           >
             {hover ? (
               description === '' ? (
-                <Image src={img} alt={title} title={title} />
+                <Image src={img} alt={title} title={title} responsive />
               ) : (
                 <Box p={1}>
                   <Typography variant='body2' textAlign='left'>
@@ -56,7 +56,7 @@ export const CMSContentCard = ({
                 </Box>
               )
             ) : (
-              <Image src={img} alt={title} title={title} />
+              <Image src={img} alt={title} title={title} responsive />
             )}
           </Box>
           <Box>

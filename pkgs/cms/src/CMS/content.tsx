@@ -13,9 +13,9 @@ export const CMSContent = () => {
         {display.map((item) => {
           return (
             <Grid item key={item.title}>
-              {item.slug || item.external ? (
+              {item.link || item.external ? (
                 <Link
-                  href={(item.slug || item.external) as string}
+                  href={(item.link || item.external) as string}
                   external={!!item.external}
                   title={item.title}
                 >

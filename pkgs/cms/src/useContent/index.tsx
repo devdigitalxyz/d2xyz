@@ -19,8 +19,9 @@ export type ContentItem = {
   description?: string;
   tags: string[];
   img: string;
-  date: Date;
+  date: string;
   slug?: string;
+  link?: string;
   external?: string;
   premium?: boolean;
   position?: number;
@@ -35,8 +36,9 @@ export type ContentCollection = {
   description?: string;
   tags: string[];
   img: string;
-  date: Date;
+  date: string;
   slug?: string;
+  link?: string;
   external?: string;
   premium?: boolean;
   position?: number;
@@ -159,8 +161,8 @@ export const ContentProvider = ({
     if (sortBy === 'date') {
       filtered = filtered.sort((a, b) => {
         return sortDir === 'desc'
-          ? b.date.getTime() - a.date.getTime()
-          : a.date.getTime() - b.date.getTime();
+          ? new Date(b.date).getTime() - new Date(a.date).getTime()
+          : new Date(a.date).getTime() - new Date(b.date).getTime();
       });
     }
 
