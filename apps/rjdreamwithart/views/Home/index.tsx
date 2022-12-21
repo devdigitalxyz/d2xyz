@@ -60,10 +60,10 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='Credits'
-              href='/credits'
+              title='Partners'
+              href='/partners'
             >
-              Credits
+              Partners
             </LinkButton>
           </Box>
         </Grid>

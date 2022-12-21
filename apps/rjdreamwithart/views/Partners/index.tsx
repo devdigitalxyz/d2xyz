@@ -2,7 +2,7 @@ import { Grid, Box } from '@mui/material';
 import { Image, LinkButton, Subtitle1 } from 'ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
-export const CreditsView = () => {
+export const PartnersView = () => {
   return (
     <HomeLayout>
       <Grid
@@ -31,7 +31,7 @@ export const CreditsView = () => {
             </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
-            <Subtitle1 paragraph>Credits</Subtitle1>
+            <Subtitle1 paragraph>Partners</Subtitle1>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton

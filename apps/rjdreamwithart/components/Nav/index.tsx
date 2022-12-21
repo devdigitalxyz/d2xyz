@@ -16,8 +16,8 @@ export const Nav = () => {
           </LinkButton>
         </Box>
         <Box>
-          <LinkButton fullWidth href='/credits' title='Credits'>
-            Credits
+          <LinkButton fullWidth href='/partners' title='Partners'>
+            Partners
           </LinkButton>
         </Box>
       </Box>
