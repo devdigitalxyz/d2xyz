@@ -90,20 +90,6 @@ export const SocialsView = ({
               </LinkButton>
             </Box>
           )}
-          {pinterest && (
-            <Box textAlign='center' mt={1.5} mb={1.5}>
-              <LinkButton
-                color='secondary'
-                variant='contained'
-                fullWidth
-                external
-                href={`https://pinterest.com/${brandName}`}
-                title={`${brandName} on Pinterest`}
-              >
-                Pinterest
-              </LinkButton>
-            </Box>
-          )}
           {linkedin && (
             <Box textAlign='center' mt={1.5} mb={1.5}>
               <LinkButton
@@ -117,6 +103,20 @@ export const SocialsView = ({
                 title={`${brandName} on LinkedIn`}
               >
                 LinkedIn
+              </LinkButton>
+            </Box>
+          )}
+          {pinterest && (
+            <Box textAlign='center' mt={1.5} mb={1.5}>
+              <LinkButton
+                color='secondary'
+                variant='contained'
+                fullWidth
+                external
+                href={`https://pinterest.com/${brandName}`}
+                title={`${brandName} on Pinterest`}
+              >
+                Pinterest
               </LinkButton>
             </Box>
           )}

@@ -49,6 +49,18 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='FREE Art'
+              external
+              href='https://ricardojrmcom.gumroad.com/l/art-commission'
+            >
+              FREE Art
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
               title='Socials'
               href='/socials'
             >

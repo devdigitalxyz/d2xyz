@@ -39,10 +39,10 @@ export const PartnersView = () => {
               variant='contained'
               fullWidth
               external
-              href='https://www.ricardojrm.com/'
-              title='Business Development'
+              href='https://www.devdigital.xyz/'
+              title='Web Development'
             >
-              Business Development
+              Web Development
             </LinkButton>
           </Box>
         </Grid>

@@ -60,7 +60,7 @@ const init: ContentContextType = {
   content: {},
   display: [],
   tags: { tags: [] },
-  sortBy: 'position',
+  sortBy: 'date',
   sortDir: 'desc',
   search: '',
   filters: [],
@@ -68,7 +68,7 @@ const init: ContentContextType = {
   sortBySet: () => undefined,
   sortDirSet: () => undefined,
   searchSet: () => undefined,
-  viewOpt: 'items',
+  viewOpt: 'collections',
   viewOptSet: () => undefined,
   lsid: 'd2xyz-cms',
 };

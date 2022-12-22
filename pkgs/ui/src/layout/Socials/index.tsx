@@ -70,6 +70,19 @@ export const Socials = ({
         </LinkIcon>
       </Grid>
     )}
+    {linkedin && (
+      <Grid item>
+        <LinkIcon
+          external
+          href={linkedinOverride || `https://linkedin.com/in/${brandName}`}
+          tooltip='LinkedIn'
+          title={`${brandName} on LinkedIn`}
+          noTooltip
+        >
+          <LinkedInIcon sx={{ color: '#fff', fontSize: '42px' }} />
+        </LinkIcon>
+      </Grid>
+    )}
     {pinterest && (
       <Grid item>
         <LinkIcon
@@ -93,19 +106,6 @@ export const Socials = ({
           noTooltip
         >
           <GitHubIcon sx={{ color: '#fff', fontSize: '42px' }} />
-        </LinkIcon>
-      </Grid>
-    )}
-    {linkedin && (
-      <Grid item>
-        <LinkIcon
-          external
-          href={linkedinOverride || `https://linkedin.com/in/${brandName}`}
-          tooltip='LinkedIn'
-          title={`${brandName} on LinkedIn`}
-          noTooltip
-        >
-          <LinkedInIcon sx={{ color: '#fff', fontSize: '42px' }} />
         </LinkIcon>
       </Grid>
     )}

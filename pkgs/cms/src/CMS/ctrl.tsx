@@ -191,7 +191,7 @@ export const CMSCtrl = () => {
                               Title
                             </Button>
                           </Grid>
-                          <Grid item>
+                          {/* <Grid item>
                             <Button
                               size='small'
                               color='primary'
@@ -202,7 +202,7 @@ export const CMSCtrl = () => {
                             >
                               Position
                             </Button>
-                          </Grid>
+                          </Grid> */}
                         </Grid>
                       </Box>
                     </Box>
