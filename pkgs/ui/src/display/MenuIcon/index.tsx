@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import type { IconButtonProps} from '@mui/material';
+import type { IconButtonProps } from '@mui/material';
 import { Box, IconButton, Tooltip, Menu } from '@mui/material';
 import MuiMenuIcon from '@mui/icons-material/Menu';
 
@@ -16,6 +16,7 @@ export interface MenuIconProps {
   children?: React.ReactNode;
   icon?: React.ReactNode;
   sx?: IconButtonProps['sx'];
+  tooltip?: boolean;
 }
 
 export const MenuIcon = ({
@@ -23,6 +24,7 @@ export const MenuIcon = ({
   children,
   icon,
   sx,
+  tooltip,
 }: MenuIconProps) => {
   const [anchorMenu, anchorMenuSet] = useState<null | HTMLElement>(null);
   const openMenu = useMemo(() => Boolean(anchorMenu), [anchorMenu]);
@@ -35,11 +37,17 @@ export const MenuIcon = ({
 
   return (
     <Box display='inline-block'>
-      <Tooltip title={labels.tooltip}>
+      {tooltip ? (
+        <Tooltip title={labels.tooltip}>
+          <IconButton size='small' onClick={openHandler} sx={sx}>
+            {icon || <MuiMenuIcon />}
+          </IconButton>
+        </Tooltip>
+      ) : (
         <IconButton size='small' onClick={openHandler} sx={sx}>
           {icon || <MuiMenuIcon />}
         </IconButton>
-      </Tooltip>
+      )}
       <Menu
         anchorEl={anchorMenu}
         open={openMenu}

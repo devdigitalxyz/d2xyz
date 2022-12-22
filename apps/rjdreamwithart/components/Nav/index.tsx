@@ -11,6 +11,16 @@ export const Nav = () => {
           </LinkButton>
         </Box>
         <Box>
+          <LinkButton
+            fullWidth
+            external
+            href='https://ricardojrmcom.gumroad.com/l/art-commission'
+            title='FREE Art'
+          >
+            FREE Art
+          </LinkButton>
+        </Box>
+        <Box>
           <LinkButton fullWidth href='/socials' title='Socials'>
             Socials
           </LinkButton>
