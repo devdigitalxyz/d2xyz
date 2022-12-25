@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import { createEmotionCache } from 'scripts';
+import { createEmotionCache } from '@d2xyz/scripts';
 
 export class UiDocument extends Document {
   public render() {

@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
-import { CMS } from 'cms';
-import { MetaTags } from 'ui/src/utils';
+import { CMS } from '@d2xyz/cms';
+import { MetaTags } from '@d2xyz/ui/src/utils';
 import { PageLayout } from '../../components/PageLayout';
 
 export const CollectionsView = () => {

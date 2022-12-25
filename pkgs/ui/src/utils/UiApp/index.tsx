@@ -1,8 +1,8 @@
 import type { AppProps, AppType } from 'next/app';
 import { CacheProvider } from '@emotion/react';
 import type { EmotionCache } from '@emotion/react';
-import { createEmotionCache } from 'scripts';
-import { UiProvider } from 'ui/src/utils';
+import { createEmotionCache } from '@d2xyz/scripts';
+import { UiProvider } from '@d2xyz/ui/src/utils';
 
 const clientSideEmotionCache = createEmotionCache();
 

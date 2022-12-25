@@ -1,6 +1,6 @@
 import React, { type FC, type ReactNode } from 'react';
 import { useTheme, Box, Container } from '@mui/material';
-import { hexToRgb } from 'scripts';
+import { hexToRgb } from '@d2xyz/scripts';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
@@ -92,7 +92,7 @@ export const Layout: FC<LayoutProps> = ({
         </Box>
       )}
 
-      {children && <Container maxWidth='xl'>{children}</Container>}
+      {children && <Container maxWidth='lg'>{children}</Container>}
 
       {footer && (
         <Box

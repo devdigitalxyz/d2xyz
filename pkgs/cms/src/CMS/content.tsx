@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
-import { Link } from 'ui';
+import { Link } from '@d2xyz/ui';
 import { useContent } from '../useContent';
 import { CMSContentCard } from './card';
 

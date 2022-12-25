@@ -1,5 +1,5 @@
 {
-  "name": "hooks",
+  "name": "@d2xyz/hooks",
   "version": "0.0.0",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -8,6 +8,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "scripts": "*"
+    "@d2xyz/scripts": "*"
   }
 }

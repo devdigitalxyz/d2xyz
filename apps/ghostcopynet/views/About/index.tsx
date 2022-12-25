@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
-import { H4, Body1 } from 'ui';
-import { MetaTags } from 'ui/src/utils';
+import { H4, Body1 } from '@d2xyz/ui';
+import { MetaTags } from '@d2xyz/ui/src/utils';
 import { PageLayout } from '../../components/PageLayout';
 
 export const AboutView = () => {

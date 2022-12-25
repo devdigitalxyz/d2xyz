@@ -1,1 +1,1 @@
-export { palette } from 'ui/src/theme/palette';
+export { palette } from '@d2xyz/ui/src/theme/palette';

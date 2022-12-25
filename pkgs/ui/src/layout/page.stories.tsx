@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Story, Meta } from '@storybook/react';
 import { Box, useTheme } from '@mui/material';
-import { H1 } from 'ui';
+import { H1 } from '@d2xyz/ui';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { hexToRgb } from 'scripts';
+import { hexToRgb } from '@d2xyz/scripts';
 
 export default {
   title: 'Layout/Page Layout',

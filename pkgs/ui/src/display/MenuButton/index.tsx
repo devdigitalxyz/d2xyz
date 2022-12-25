@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Box, Menu } from '@mui/material';
-import { Button } from 'ui';
+import { Button } from '@d2xyz/ui';
 
 export interface MenuButtonLabels {
   btn: string | React.ReactNode;

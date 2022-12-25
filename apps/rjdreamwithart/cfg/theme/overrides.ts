@@ -1,1 +1,1 @@
-export { overrides } from 'ui/src/theme/overrides';
+export { overrides } from '@d2xyz/ui/src/theme/overrides';

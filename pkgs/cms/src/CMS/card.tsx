@@ -1,68 +1,64 @@
-import React, { useState } from 'react';
-import { Box, Paper, Typography, Grid } from '@mui/material';
+import React from 'react';
+import { Box, Paper, Typography } from '@mui/material';
 import dayjs from 'dayjs';
-import { Image } from 'ui';
+import { Image } from '@d2xyz/ui';
 
 export interface CMSContentCardProps {
   title: string;
-  description?: string;
   img: string;
   date: string;
+  description?: string;
 }
 
 export const CMSContentCard = ({
   title,
-  description = '',
   img,
   date,
+  description,
 }: CMSContentCardProps) => {
-  const [hover, hoverSet] = useState<boolean>(false);
-
   return (
-    <div
-      onMouseEnter={() => hoverSet(true)}
-      onMouseLeave={() => hoverSet(false)}
-    >
-      <Paper sx={{ maxWidth: '355px' }}>
-        <Box py={1}>
-          <Grid
-            pb={1}
-            container
-            sx={{
-              height: '50px',
-              overflow: 'hidden',
-            }}
-            alignItems='center'
-          >
-            <Grid item xs={12}>
-              <Typography variant='subtitle1' component='h1' textAlign='center'>
-                {title}
-              </Typography>
-            </Grid>
-          </Grid>
+    <div>
+      <Paper sx={{ maxWidth: '272px' }}>
+        <Box>
           <Box
             textAlign='center'
-            sx={{ height: '355px', width: '355px' }}
+            sx={{ height: '225px', width: '272px', overflow: 'hidden' }}
             mx='auto'
           >
-            {hover ? (
-              description === '' ? (
-                <Image src={img} alt={title} title={title} responsive />
-              ) : (
-                <Box p={1}>
-                  <Typography variant='body2' textAlign='left'>
-                    {description}
-                  </Typography>
-                </Box>
-              )
-            ) : (
-              <Image src={img} alt={title} title={title} responsive />
-            )}
+            <Image
+              src={img}
+              alt={title}
+              title={title}
+              responsive
+              sx={{ borderRadius: '4px', objectFit: 'cover' }}
+            />
           </Box>
-          <Box>
-            <Typography textAlign='center' color='textSecondary'>
+          <Box
+            p={1}
+            sx={{
+              height: '75px',
+              overflow: 'hidden',
+            }}
+          >
+            <Typography
+              variant='subtitle2'
+              component='h1'
+              sx={{ fontWeight: 'bold' }}
+            >
+              {title}
+            </Typography>
+            <Typography variant='caption' color='textSecondary'>
               {dayjs(date).format(`DD MMM 'YY`)}
             </Typography>
+            <Box
+              sx={{
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+                textOverflow: 'ellipsis',
+              }}
+            >
+              <Typography variant='body2'>{description}</Typography>
+            </Box>
           </Box>
         </Box>
       </Paper>

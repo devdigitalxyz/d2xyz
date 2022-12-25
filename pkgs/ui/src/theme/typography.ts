@@ -63,7 +63,7 @@ export const typography: ThemeOptions['typography'] = {
   },
   subtitle2: {
     fontSize: '17px',
-    lineHeight: '24px',
+    lineHeight: '19px',
     fontWeight: 400,
     // [breakpoints.down('sm')]: {},
   },
@@ -81,7 +81,7 @@ export const typography: ThemeOptions['typography'] = {
   },
   caption: {
     fontSize: '12px',
-    lineHeight: '19px',
+    lineHeight: '14px',
     fontWeight: 400,
     // [breakpoints.down('sm')]: {},
   },

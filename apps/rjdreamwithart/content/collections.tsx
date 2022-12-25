@@ -1,4 +1,4 @@
-import { type ContentRecord } from 'cms';
+import { type ContentRecord } from '@d2xyz/cms';
 
 export const tags = {
   tags: [

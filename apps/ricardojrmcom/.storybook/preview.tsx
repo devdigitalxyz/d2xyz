@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
-import { UiProvider } from 'ui/src/utils/UiProvider';
+import { UiProvider } from '@d2xyz/ui/src/utils/UiProvider';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

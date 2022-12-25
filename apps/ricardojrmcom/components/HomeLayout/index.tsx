@@ -1,4 +1,4 @@
-import { Layout, Header, Footer } from 'ui';
+import { Layout, Header, Footer } from '@d2xyz/ui';
 import { APP } from '../../cfg/app';
 import { Logo } from '../Logo';
 import { Nav } from '../Nav';

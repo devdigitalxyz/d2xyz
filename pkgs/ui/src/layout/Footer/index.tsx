@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useTheme, Box, Grid } from '@mui/material';
-import { Body2 } from 'ui';
+import { Body2 } from '@d2xyz/ui';
 import { Socials, type SocialsProps } from '../Socials';
 
 export interface FooterProps {

@@ -1,4 +1,4 @@
-import { Image, LinkButton } from 'ui';
+import { Image, LinkButton } from '@d2xyz/ui';
 
 export const Logo = () => (
   <LinkButton href='/' title='Ricardo Mota'>

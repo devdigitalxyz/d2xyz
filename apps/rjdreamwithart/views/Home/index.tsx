@@ -1,8 +1,20 @@
+import { useEffect } from 'react';
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1 } from 'ui';
+import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
+import { sanity } from '../../cfg/sanity';
 
 export const HomeView = () => {
+  useEffect(() => {
+    const fetch = async () => {
+      const items = await sanity.fetch(`
+          *[_type == "collection"]
+        `);
+      console.log(items);
+    };
+    fetch();
+  }, []);
+
   return (
     <HomeLayout>
       <Grid

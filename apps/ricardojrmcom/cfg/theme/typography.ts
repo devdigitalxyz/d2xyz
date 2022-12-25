@@ -1,1 +1,1 @@
-export { typography } from 'ui/src/theme/typography';
+export { typography } from '@d2xyz/ui/src/theme/typography';

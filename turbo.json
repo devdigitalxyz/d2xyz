@@ -4,14 +4,12 @@
     "build": {
       "dependsOn": [
         "^build",
-        "$NEXT_PUBLIC_GA_DEVDIGITALXYZ",
-        "$NEXT_PUBLIC_MSC_DEVDIGITALXYZ",
-        "$NEXT_PUBLIC_GA_RICARDOJRMCOM",
-        "$NEXT_PUBLIC_MSC_RICARDOJRMCOM",
-        "$NEXT_PUBLIC_GA_GHOSTCOPYNET",
-        "$NEXT_PUBLIC_MSC_GHOSTCOPYNET",
-        "$NEXT_PUBLIC_GA_RJDREAMWITHART",
-        "$NEXT_PUBLIC_MSC_RJDREAMWITHART"
+        "$NODE_ENV",
+        "$NEXT_PUBLIC_GA",
+        "$NEXT_PUBLIC_MSC",
+        "$NEXT_PUBLIC_SANITY_PROJECT_ID",
+        "$NEXT_PUBLIC_SANITY_DATASET",
+        "$NEXT_PUBLIC_SANITY_API_VERSION"
       ],
       "outputs": ["dist/**", ".next/**"]
     },

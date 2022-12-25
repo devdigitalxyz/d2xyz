@@ -6,7 +6,7 @@ import type {
   GetStaticPaths,
 } from 'next';
 import { type ParsedUrlQuery } from 'querystring';
-import { CMSContentOverview } from 'cms';
+import { CMSContentOverview } from '@d2xyz/cms';
 import { PageLayout } from '../../components/PageLayout';
 import { collections } from '../../content/collections';
 

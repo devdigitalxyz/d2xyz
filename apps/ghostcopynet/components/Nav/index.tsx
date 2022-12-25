@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { MenuIcon, LinkButton } from 'ui';
+import { MenuIcon, LinkButton } from '@d2xyz/ui';
 
 export const Nav = () => {
   return (

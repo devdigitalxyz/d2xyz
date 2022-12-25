@@ -14,8 +14,11 @@ const config = {
     locales: ['en'],
     defaultLocale: 'en',
   },
-  experimental: {
-    transpilePackages: ['scripts', 'ui'],
-  },
+  transpilePackages: [
+    '@d2xyz/cms',
+    '@d2xyz/hooks',
+    '@d2xyz/scripts',
+    '@d2xyz/ui',
+  ],
 };
 export default config;

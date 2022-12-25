@@ -7,14 +7,22 @@ import React, {
   useContext,
   type ReactNode,
 } from 'react';
-import { useLocalState } from 'hooks';
+import { useLocalState } from '@d2xyz/hooks';
 
 export type ContentSortByType = 'date' | 'title' | 'position';
 export type ContentSortByOpts = 'asc' | 'desc';
 export type ContentViewOpts = 'items' | 'collections';
 export type ContentItemActions = [string, string];
 
-export type ContentItem = {
+export type SanityContentDefaults = {
+  _createdAt?: string;
+  _id?: string;
+  _rev?: string;
+  _type?: string;
+  _updatedAt?: string;
+};
+
+export type ContentItem = SanityContentDefaults & {
   title: string;
   tags: string[];
   img: string;

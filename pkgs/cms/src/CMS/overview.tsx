@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
-import { Image, Subtitle1, Body1, Body2, Link, LinkButton } from 'ui';
+import { Image, Subtitle1, Body1, Body2, Link, LinkButton } from '@d2xyz/ui';
 import { type ContentItem } from '../useContent';
 import { CMSContentCard } from './card';
 

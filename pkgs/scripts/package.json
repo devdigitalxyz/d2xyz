@@ -1,5 +1,5 @@
 {
-  "name": "scripts",
+  "name": "@d2xyz/scripts",
   "version": "0.0.0",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

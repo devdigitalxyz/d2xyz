@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1, type SocialsProps } from 'ui';
+import { Image, LinkButton, Subtitle1, type SocialsProps } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
 // import GitHubIcon from '@mui/icons-material/GitHub';
 // import TwitterIcon from '@mui/icons-material/Twitter';

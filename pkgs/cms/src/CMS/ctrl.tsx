@@ -9,8 +9,8 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from '@mui/material';
-import { useLocalState } from 'hooks';
-import { stringCapitalize } from 'scripts';
+import { useLocalState } from '@d2xyz/hooks';
+import { stringCapitalize } from '@d2xyz/scripts';
 import { useContent } from '../useContent';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import ClearIcon from '@mui/icons-material/Clear';

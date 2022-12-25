@@ -11,9 +11,9 @@
     "build-sb": "build-storybook -s ./public"
   },
   "dependencies": {
-    "cms": "*",
-    "hooks": "*",
-    "scripts": "*",
-    "ui": "*"
+    "@d2xyz/cms": "*",
+    "@d2xyz/hooks": "*",
+    "@d2xyz/scripts": "*",
+    "@d2xyz/ui": "*"
   }
 }

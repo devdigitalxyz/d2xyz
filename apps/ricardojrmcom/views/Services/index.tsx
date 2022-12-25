@@ -1,6 +1,6 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1 } from 'ui';
-import { MetaTags } from 'ui/src/utils';
+import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
+import { MetaTags } from '@d2xyz/ui/src/utils';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const ServicesView = () => {
