@@ -20,9 +20,14 @@ export const collection = defineType({
       },
     }),
     defineField({
-      name: 'description',
+      name: 'link',
+      title: 'Link',
       type: 'string',
-      title: 'Description',
+    }),
+    defineField({
+      name: 'external',
+      title: 'External Link',
+      type: 'string',
     }),
     defineField({
       name: 'image',
@@ -33,10 +38,32 @@ export const collection = defineType({
       },
     }),
     defineField({
+      name: 'description',
+      type: 'string',
+      title: 'Description',
+    }),
+    defineField({
+      name: 'featured',
+      type: 'boolean',
+      title: 'Featured',
+    }),
+    defineField({
+      name: 'premium',
+      type: 'boolean',
+      title: 'Premium',
+    }),
+    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'tag' } }],
+    }),
+    defineField({
+      name: 'actions',
+      title: 'Actions',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Split on |||',
     }),
     defineField({
       name: 'publishedAt',
@@ -55,4 +82,18 @@ export const collection = defineType({
       of: [{ type: 'reference', to: { type: 'item' } }],
     }),
   ],
+
+  preview: {
+    select: {
+      title: 'title',
+      // slug: 'slug',
+      description: 'description',
+      tags: 'tags',
+      body: 'body',
+      image: 'image',
+    },
+    prepare(selection) {
+      return { ...selection };
+    },
+  },
 });

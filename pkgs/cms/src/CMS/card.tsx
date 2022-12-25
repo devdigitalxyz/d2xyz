@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Box, Paper, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { Image } from '@d2xyz/ui';
+import { CARD_IMAGE_HEIGHT, CARD_TEXT_HEIGHT, CARD_WIDTH } from '../../cfg';
 
 export interface CMSContentCardProps {
   title: string;
@@ -16,13 +17,26 @@ export const CMSContentCard = ({
   date,
   description,
 }: CMSContentCardProps) => {
+  const [hover, hoverSet] = useState<boolean>(false);
+  const scale = useMemo(() => {
+    return hover ? 1.25 : 1;
+  }, [hover]);
   return (
-    <div>
-      <Paper sx={{ maxWidth: '272px' }}>
+    <div
+      onMouseEnter={() => hoverSet(true)}
+      onMouseLeave={() => hoverSet(false)}
+    >
+      <Paper sx={{ maxWidth: CARD_WIDTH }}>
         <Box>
           <Box
             textAlign='center'
-            sx={{ height: '225px', width: '272px', overflow: 'hidden' }}
+            sx={{
+              height: CARD_IMAGE_HEIGHT,
+              width: CARD_WIDTH,
+              overflow: 'hidden',
+              borderTopLeftRadius: '4px',
+              borderTopRightRadius: '4px',
+            }}
             mx='auto'
           >
             <Image
@@ -30,13 +44,17 @@ export const CMSContentCard = ({
               alt={title}
               title={title}
               responsive
-              sx={{ borderRadius: '4px', objectFit: 'cover' }}
+              sx={{
+                objectFit: 'cover',
+                transform: `scale(${scale})`,
+                transition: 'transform 0.3s ease',
+              }}
             />
           </Box>
           <Box
             p={1}
             sx={{
-              height: '75px',
+              height: CARD_TEXT_HEIGHT,
               overflow: 'hidden',
             }}
           >
@@ -50,15 +68,16 @@ export const CMSContentCard = ({
             <Typography variant='caption' color='textSecondary'>
               {dayjs(date).format(`DD MMM 'YY`)}
             </Typography>
-            <Box
+            <Typography
+              variant='body2'
               sx={{
                 overflow: 'hidden',
                 whiteSpace: 'nowrap',
                 textOverflow: 'ellipsis',
               }}
             >
-              <Typography variant='body2'>{description}</Typography>
-            </Box>
+              {description}
+            </Typography>
           </Box>
         </Box>
       </Paper>

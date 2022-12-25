@@ -79,6 +79,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-toastify": "^9.1.1",
+    "react-youtube": "^10.1.0",
     "sanity": "^3.1.2",
     "styled-components": "^5.3.6",
     "zod": "^3.19.1",

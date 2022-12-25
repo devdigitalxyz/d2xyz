@@ -10,8 +10,8 @@ export interface ImageProps {
 
 export const Image = ({
   src,
-  title = 'Title',
-  alt = 'Image',
+  title = '',
+  alt = '',
   responsive,
   sx,
 }: ImageProps) => {
@@ -29,6 +29,7 @@ export const Image = ({
       src={src}
       title={title}
       alt={alt}
+      loading='lazy'
       style={{ ...opts, userSelect: 'none', display: 'inline-block', ...sx }}
     />
   );

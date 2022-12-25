@@ -8,46 +8,23 @@ import React, {
   type ReactNode,
 } from 'react';
 import { useLocalState } from '@d2xyz/hooks';
+import type { CMSDocument, CMSCollection, CMSTag } from '../types';
 
 export type ContentSortByType = 'date' | 'title' | 'position';
 export type ContentSortByOpts = 'asc' | 'desc';
 export type ContentViewOpts = 'items' | 'collections';
-export type ContentItemActions = [string, string];
 
-export type SanityContentDefaults = {
-  _createdAt?: string;
-  _id?: string;
-  _rev?: string;
-  _type?: string;
-  _updatedAt?: string;
-};
-
-export type ContentItem = SanityContentDefaults & {
-  title: string;
-  tags: string[];
-  img: string;
-  date: string;
-  link?: string;
-  description?: string;
-  slug?: string;
-  external?: string;
-  premium?: boolean;
-  position?: number;
-  featured?: boolean;
-  body?: ReactNode;
-  items?: {
-    [x: string]: ContentItem;
-  };
-  actions?: ContentItemActions[];
-};
-
-export type ContentRecord = {
-  [x: string]: ContentItem;
+export type CMSConfig = {
+  projectId?: string;
+  dataset?: string;
+  apiVersion?: string;
+  useCdn?: boolean;
 };
 
 export interface ContentContextType {
-  content: ContentRecord;
-  display: ContentItem[];
+  cfg?: CMSConfig;
+  content: CMSCollection[];
+  display: CMSDocument[];
   tags: {
     [x: string]: string[];
   };
@@ -65,9 +42,11 @@ export interface ContentContextType {
 }
 
 const init: ContentContextType = {
-  content: {},
+  content: [],
   display: [],
-  tags: { tags: [] },
+  tags: {
+    tags: [],
+  },
   sortBy: 'date',
   sortDir: 'desc',
   search: '',
@@ -76,7 +55,7 @@ const init: ContentContextType = {
   sortBySet: () => undefined,
   sortDirSet: () => undefined,
   searchSet: () => undefined,
-  viewOpt: 'collections',
+  viewOpt: 'items',
   viewOptSet: () => undefined,
   lsid: 'd2xyz-cms',
 };
@@ -121,15 +100,12 @@ export const ContentProvider = ({
     let filtered: ContentContextType['display'] = [];
 
     if (viewOpt === 'collections') {
-      filtered = Object.values(content);
+      filtered = content;
     }
     if (viewOpt === 'items') {
-      filtered = Object.values(content).reduce(
-        (acc: ContentItem[], collection: ContentItem) => {
-          const result: ContentItem[] = [
-            ...acc,
-            ...Object.values(collection.items || {}),
-          ];
+      filtered = content.reduce(
+        (acc: CMSDocument[], collection: CMSCollection) => {
+          const result: CMSDocument[] = [...acc, ...collection.items];
           return result;
         },
         [],
@@ -140,25 +116,20 @@ export const ContentProvider = ({
     if (filters.length) {
       filtered = filtered.filter((item) => {
         return filters.every((filter) => {
-          return item.tags.includes(filter);
+          const targets = item.tags.map((tag: CMSTag) => tag.name);
+          return targets.includes(filter);
         });
       });
     }
 
     // order items
-    if (sortBy === 'position') {
-      filtered = filtered.sort((a, b) => {
-        return sortDir === 'desc'
-          ? (b?.position || 0) - (a?.position || 0)
-          : (a?.position || 0) - (b?.position || 0);
-      });
-    }
-
     if (sortBy === 'date') {
       filtered = filtered.sort((a, b) => {
         return sortDir === 'desc'
-          ? new Date(b.date).getTime() - new Date(a.date).getTime()
-          : new Date(a.date).getTime() - new Date(b.date).getTime();
+          ? new Date(b.publishedAt).getTime() -
+              new Date(a.publishedAt).getTime()
+          : new Date(a.publishedAt).getTime() -
+              new Date(b.publishedAt).getTime();
       });
     }
 
@@ -222,3 +193,20 @@ export const ContentProvider = ({
 };
 
 export const useContent = () => useContext(ContentContext);
+
+export interface CMSConfigProps {
+  cfg: CMSConfig;
+  children?: ReactNode;
+}
+
+export const CMSConfigContext = createContext<CMSConfig>({});
+
+export const CMSConfigProvider = ({ children, cfg }: CMSConfigProps) => {
+  return (
+    <CMSConfigContext.Provider value={cfg}>
+      {children}
+    </CMSConfigContext.Provider>
+  );
+};
+
+export const useCMSConfig = () => useContext(CMSConfigContext);

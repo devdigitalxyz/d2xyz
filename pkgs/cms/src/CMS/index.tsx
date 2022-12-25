@@ -3,8 +3,6 @@ import { Box } from '@mui/material';
 import { CMSCtrl } from './ctrl';
 import { CMSContent } from './content';
 
-export * from './overview';
-
 export const CMS = () => {
   return (
     <Box>
@@ -13,3 +11,7 @@ export const CMS = () => {
     </Box>
   );
 };
+
+export * from './overview';
+export * from './body';
+export * from './card';

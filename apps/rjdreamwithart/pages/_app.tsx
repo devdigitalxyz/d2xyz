@@ -3,7 +3,9 @@ import { CacheProvider } from '@emotion/react';
 import type { EmotionCache } from '@emotion/react';
 import { createEmotionCache } from '@d2xyz/scripts';
 import { UiProvider } from '@d2xyz/ui/src/utils';
+import { CMSConfigProvider } from '@d2xyz/cms';
 import { theme } from '../cfg/theme';
+import { config } from '../cfg/sanity';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -34,7 +36,9 @@ const UiApp: AppType = (props: UiAppProps) => {
           keywords: 'art, concept art, character design',
         }}
       >
-        <AnyComponent {...pageProps} />
+        <CMSConfigProvider cfg={config}>
+          <AnyComponent {...pageProps} />
+        </CMSConfigProvider>
       </UiProvider>
     </CacheProvider>
   );

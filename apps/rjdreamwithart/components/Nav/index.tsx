@@ -6,7 +6,7 @@ export const Nav = () => {
     <MenuIcon sx={{ color: '#fff' }} labels={{ tooltip: 'Navigation' }}>
       <Box>
         <Box>
-          <LinkButton fullWidth href='/collections' title='Gallery'>
+          <LinkButton fullWidth href='/gallery' title='Gallery'>
             Gallery
           </LinkButton>
         </Box>
