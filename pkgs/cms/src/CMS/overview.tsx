@@ -3,16 +3,14 @@ import { Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
 import { Image, Subtitle1, Body1, Body2, Link, LinkButton } from '@d2xyz/ui';
 import { type CMSCollection } from '../types';
-import { type CMSConfig } from '../useContent';
 import { CMSContentCard } from './card';
 import { CMSContentBody } from './body';
 
 export interface CMSContentOverviewProps {
-  cfg?: CMSConfig;
   item: CMSCollection;
 }
 
-export const CMSContentOverview = ({ item, cfg }: CMSContentOverviewProps) => {
+export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
   console.log({ item });
   return (
     <Box p={1}>
@@ -43,7 +41,7 @@ export const CMSContentOverview = ({ item, cfg }: CMSContentOverviewProps) => {
             </Grid>
           </Box>
         )}
-        {item.body && <CMSContentBody item={item} cfg={cfg} />}
+        {item.body && <CMSContentBody item={item} />}
         {item.items ? (
           <Grid
             container
