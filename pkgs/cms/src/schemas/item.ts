@@ -59,13 +59,6 @@ export const item = defineType({
       of: [{ type: 'reference', to: { type: 'tag' } }],
     }),
     defineField({
-      name: 'actions',
-      title: 'Actions',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: 'Split on |||',
-    }),
-    defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
