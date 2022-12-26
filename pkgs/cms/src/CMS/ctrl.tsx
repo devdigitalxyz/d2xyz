@@ -9,7 +9,6 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from '@mui/material';
-import { useLocalState } from '@d2xyz/hooks';
 import { stringCapitalize } from '@d2xyz/scripts';
 import { useContent } from '../useContent';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -28,7 +27,9 @@ export const CMSCtrl = () => {
     viewOpt,
     filters,
     filtersSet,
-    lsid,
+    expanded,
+    toggleExpanded,
+    onlyItems,
   } = useContent();
 
   const updateText = useCallback(
@@ -54,15 +55,6 @@ export const CMSCtrl = () => {
   const clearFilters = useCallback(() => {
     filtersSet([]);
   }, [filtersSet]);
-
-  const [expanded, expandedSet] = useLocalState<boolean>(
-    false,
-    `${lsid}-showfilters`,
-  );
-
-  const toggleExpanded = useCallback(() => {
-    expandedSet((t) => !t);
-  }, [expandedSet]);
 
   return (
     <Box>
@@ -123,43 +115,45 @@ export const CMSCtrl = () => {
             <Box p={1}>
               <Box>
                 <Grid container alignItems='center' spacing={2}>
-                  <Grid item>
-                    <Box>
+                  {!onlyItems && (
+                    <Grid item>
                       <Box>
-                        <Typography variant='body2'>View Options</Typography>
-                      </Box>
-                      <Box>
-                        <Grid container spacing={0.5}>
-                          <Grid item>
-                            <Button
-                              size='small'
-                              color='primary'
-                              variant={
-                                viewOpt === 'collections'
-                                  ? 'contained'
-                                  : 'outlined'
-                              }
-                              onClick={() => viewOptSet('collections')}
-                            >
-                              Collections
-                            </Button>
+                        <Box>
+                          <Typography variant='body2'>View Options</Typography>
+                        </Box>
+                        <Box>
+                          <Grid container spacing={0.5}>
+                            <Grid item>
+                              <Button
+                                size='small'
+                                color='primary'
+                                variant={
+                                  viewOpt === 'collections'
+                                    ? 'contained'
+                                    : 'outlined'
+                                }
+                                onClick={() => viewOptSet('collections')}
+                              >
+                                Collections
+                              </Button>
+                            </Grid>
+                            <Grid item>
+                              <Button
+                                size='small'
+                                color='primary'
+                                variant={
+                                  viewOpt === 'items' ? 'contained' : 'outlined'
+                                }
+                                onClick={() => viewOptSet('items')}
+                              >
+                                Items
+                              </Button>
+                            </Grid>
                           </Grid>
-                          <Grid item>
-                            <Button
-                              size='small'
-                              color='primary'
-                              variant={
-                                viewOpt === 'items' ? 'contained' : 'outlined'
-                              }
-                              onClick={() => viewOptSet('items')}
-                            >
-                              Items
-                            </Button>
-                          </Grid>
-                        </Grid>
+                        </Box>
                       </Box>
-                    </Box>
-                  </Grid>
+                    </Grid>
+                  )}
                   <Grid item>
                     <Box>
                       <Box>

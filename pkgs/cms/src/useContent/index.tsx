@@ -5,6 +5,7 @@ import React, {
   useMemo,
   createContext,
   useContext,
+  useCallback,
   type ReactNode,
 } from 'react';
 import { useLocalState } from '@d2xyz/hooks';
@@ -39,6 +40,9 @@ export interface ContentContextType {
   viewOpt: ContentViewOpts;
   viewOptSet: React.Dispatch<React.SetStateAction<ContentViewOpts>>;
   lsid?: string;
+  expanded: boolean;
+  toggleExpanded: () => void;
+  onlyItems?: boolean;
 }
 
 const init: ContentContextType = {
@@ -58,6 +62,8 @@ const init: ContentContextType = {
   viewOpt: 'items',
   viewOptSet: () => undefined,
   lsid: 'd2xyz-cms',
+  expanded: true,
+  toggleExpanded: () => undefined,
 };
 
 export const ContentContext = createContext<ContentContextType>(init);
@@ -67,6 +73,7 @@ export interface ContentProviderProps {
   content?: ContentContextType['content'];
   tags?: ContentContextType['tags'];
   lsid?: string;
+  onlyItems?: boolean;
 }
 
 export const ContentProvider = ({
@@ -74,6 +81,7 @@ export const ContentProvider = ({
   content = init.content,
   tags = init.tags,
   lsid = init.lsid,
+  onlyItems,
 }: ContentProviderProps) => {
   // states
   const [viewOpt, viewOptSet] = useLocalState<ContentViewOpts>(
@@ -95,6 +103,15 @@ export const ContentProvider = ({
   const [search, searchSet] = useState<ContentContextType['search']>(
     init.search,
   );
+
+  const [expanded, expandedSet] = useLocalState<boolean>(
+    init.expanded,
+    `${lsid}-showfilters`,
+  );
+
+  const toggleExpanded = useCallback(() => {
+    expandedSet((t) => !t);
+  }, [expandedSet]);
 
   const display = useMemo<ContentContextType['display']>(() => {
     let filtered: ContentContextType['display'] = [];
@@ -169,6 +186,9 @@ export const ContentProvider = ({
       tags,
       viewOpt,
       viewOptSet,
+      expanded,
+      toggleExpanded,
+      onlyItems,
     }),
     [
       content,
@@ -184,6 +204,9 @@ export const ContentProvider = ({
       tags,
       viewOpt,
       viewOptSet,
+      expanded,
+      toggleExpanded,
+      onlyItems,
     ],
   );
 
