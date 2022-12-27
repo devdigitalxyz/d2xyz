@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Box, Menu } from '@mui/material';
-import { Button } from '@d2xyz/ui';
+import { Button, type ButtonProps } from '@d2xyz/ui';
 
 export interface MenuButtonLabels {
   btn: string | React.ReactNode;
@@ -10,14 +10,15 @@ const labelsDefault: MenuButtonLabels = {
   btn: 'Open menu',
 };
 
-export interface MenuButtonProps {
+export type MenuButtonProps = ButtonProps & {
   labels?: MenuButtonLabels;
   children?: React.ReactNode;
-}
+};
 
 export const MenuButton = ({
   labels = labelsDefault,
   children,
+  ...props
 }: MenuButtonProps) => {
   const [anchorMenu, anchorMenuSet] = useState<null | HTMLElement>(null);
   const openMenu = useMemo(() => Boolean(anchorMenu), [anchorMenu]);
@@ -30,7 +31,9 @@ export const MenuButton = ({
 
   return (
     <Box display='inline-block'>
-      <Button onClick={openHandler}>{labels.btn}</Button>
+      <Button onClick={openHandler} {...props}>
+        {labels.btn}
+      </Button>
       <Menu anchorEl={anchorMenu} open={openMenu} onClose={closeHandler}>
         <Box>{children}</Box>
       </Menu>

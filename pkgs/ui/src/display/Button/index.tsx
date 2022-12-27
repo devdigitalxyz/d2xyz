@@ -5,7 +5,15 @@ import { Button as MuiButton } from '@mui/material';
 export interface ButtonProps
   extends Pick<
     MuiButtonProps,
-    'onClick' | 'variant' | 'color' | 'sx' | 'fullWidth' | 'type' | 'disabled'
+    | 'onClick'
+    | 'variant'
+    | 'color'
+    | 'sx'
+    | 'fullWidth'
+    | 'type'
+    | 'disabled'
+    | 'endIcon'
+    | 'startIcon'
   > {
   children?: ReactNode;
 }

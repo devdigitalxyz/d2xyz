@@ -44,6 +44,7 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
                 .fit('max')
                 .auto('format')
                 .url()}
+              sx={{ maxHeight: '50vh', width: 'auto' }}
               responsive
               alt=''
               title=''

@@ -1,9 +1,15 @@
 import { Box } from '@mui/material';
-import { MenuIcon, LinkButton } from '@d2xyz/ui';
+import { MenuButton, LinkButton } from '@d2xyz/ui';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Nav = () => {
   return (
-    <MenuIcon sx={{ color: '#fff' }} labels={{ tooltip: 'Navigation' }}>
+    <MenuButton
+      variant='text'
+      labels={{ btn: 'Menu' }}
+      sx={{ color: '#fff' }}
+      endIcon={<MenuIcon />}
+    >
       <Box>
         <Box>
           <LinkButton fullWidth href='/gallery' title='Gallery'>
@@ -31,6 +37,6 @@ export const Nav = () => {
           </LinkButton>
         </Box>
       </Box>
-    </MenuIcon>
+    </MenuButton>
   );
 };
