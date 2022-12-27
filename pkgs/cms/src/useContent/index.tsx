@@ -124,7 +124,10 @@ export const ContentProvider = ({
     if (viewOpt === 'items') {
       filtered = content.reduce(
         (acc: CMSDocument[], collection: CMSCollection) => {
-          const result: CMSDocument[] = [...acc, ...collection.items];
+          const result: CMSDocument[] = [...acc];
+          if (collection.items) {
+            result.push(...collection.items);
+          }
           return result;
         },
         [],

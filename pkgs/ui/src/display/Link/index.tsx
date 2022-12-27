@@ -14,7 +14,7 @@ export const Link = ({
   external,
   decoration = false,
   href,
-  title = 'Link',
+  title = '',
 }: LinkProps) => {
   const linkProps = useMemo(
     () => (external ? { target: '_blank', rel: 'noopener noreferrer' } : {}),

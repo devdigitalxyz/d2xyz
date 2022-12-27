@@ -62,13 +62,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slugs: [collection.slug.current],
       },
     });
-    collection.items.forEach((item) => {
-      paths.push({
-        params: {
-          slugs: [collection.slug.current, item.slug.current],
-        },
+    if (collection.items) {
+      collection.items.forEach((item) => {
+        paths.push({
+          params: {
+            slugs: [collection.slug.current, item.slug.current],
+          },
+        });
       });
-    });
+    }
   });
 
   return {

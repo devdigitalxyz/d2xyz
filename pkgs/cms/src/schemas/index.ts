@@ -1,3 +1,4 @@
+export * from './imgGallery';
 export * from './blockContent';
 export * from './item';
 export * from './tag';

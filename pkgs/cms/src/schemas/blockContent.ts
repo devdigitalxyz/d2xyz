@@ -42,6 +42,10 @@ export const blockContent = defineType({
       options: { hotspot: true },
     }),
     defineArrayMember({
+      type: 'imgGallery',
+      options: { hotspot: true },
+    }),
+    defineArrayMember({
       name: 'video',
       title: 'Video',
       type: 'video',

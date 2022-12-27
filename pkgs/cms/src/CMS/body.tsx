@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { PortableText, type PortableTextProps } from '@portabletext/react';
 import YouTube from 'react-youtube';
 import imageUrlBuilder from '@sanity/image-url';
-import { Image, H4, H5, H6, Body1, LinkButton } from '@d2xyz/ui';
+import { Image, H4, H5, H6, Body1, Link, LinkButton } from '@d2xyz/ui';
 import { type CMSItem } from '../types';
 import { useCMSConfig } from '../useContent';
 
@@ -26,9 +26,9 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
         link: ({ children, value }) => {
           const external = !value.href.startsWith('/');
           return (
-            <LinkButton href={value.href} external={external}>
+            <Link href={value.href} external={external}>
               {children}
-            </LinkButton>
+            </Link>
           );
         },
       },
@@ -44,7 +44,6 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
                 .fit('max')
                 .auto('format')
                 .url()}
-              sx={{ maxHeight: '50vh', width: 'auto' }}
               responsive
               alt=''
               title=''
