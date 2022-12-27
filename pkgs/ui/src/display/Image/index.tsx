@@ -30,7 +30,13 @@ export const Image = ({
       title={title}
       alt={alt}
       loading='lazy'
-      style={{ ...opts, userSelect: 'none', display: 'inline-block', ...sx }}
+      style={{
+        ...opts,
+        userSelect: 'none',
+        objectFit: 'cover',
+        display: 'inline-block',
+        ...sx,
+      }}
     />
   );
 };

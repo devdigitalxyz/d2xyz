@@ -34,6 +34,18 @@ export const blockContent = defineType({
               },
             ],
           },
+          {
+            title: 'LinkBtn',
+            name: 'linkBtn',
+            type: 'object',
+            fields: [
+              {
+                title: 'LinkBtn',
+                name: 'href',
+                type: 'url',
+              },
+            ],
+          },
         ],
       },
     }),
@@ -42,7 +54,7 @@ export const blockContent = defineType({
       options: { hotspot: true },
     }),
     defineArrayMember({
-      type: 'imgGallery',
+      type: 'imgBlog',
       options: { hotspot: true },
     }),
     defineArrayMember({

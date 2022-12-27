@@ -7,6 +7,7 @@ export interface LinkProps {
   href: string;
   title?: string;
   children?: React.ReactNode;
+  sx?: React.CSSProperties;
 }
 
 export const Link = ({
@@ -15,6 +16,7 @@ export const Link = ({
   decoration = false,
   href,
   title = '',
+  sx,
 }: LinkProps) => {
   const linkProps = useMemo(
     () => (external ? { target: '_blank', rel: 'noopener noreferrer' } : {}),
@@ -28,7 +30,12 @@ export const Link = ({
 
   if (external) {
     return (
-      <a href={href} title={title} {...linkProps} style={{ ...linkDecoration }}>
+      <a
+        href={href}
+        title={title}
+        {...linkProps}
+        style={{ ...linkDecoration, ...sx }}
+      >
         {children}
       </a>
     );
@@ -39,7 +46,7 @@ export const Link = ({
       href={href}
       title={title}
       {...linkProps}
-      style={{ ...linkDecoration }}
+      style={{ ...linkDecoration, ...sx }}
       passHref
     >
       {children}

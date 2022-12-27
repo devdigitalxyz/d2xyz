@@ -1,8 +1,8 @@
 import { defineType } from 'sanity';
 
-export const imgGallery = defineType({
-  name: 'imgGallery',
-  title: 'Gallery Image',
+export const imgBlog = defineType({
+  name: 'imgBlog',
+  title: 'Blog Image',
   type: 'object',
   fields: [
     {

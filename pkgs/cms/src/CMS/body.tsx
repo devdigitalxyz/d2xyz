@@ -23,6 +23,18 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
         normal: ({ value }: any) => <Body1>{value}</Body1>,
       },
       marks: {
+        linkBtn: ({ children, value }) => {
+          const external = !value.href.startsWith('/');
+          return (
+            <LinkButton
+              href={value.href}
+              external={external}
+              variant='contained'
+            >
+              {children}
+            </LinkButton>
+          );
+        },
         link: ({ children, value }) => {
           const external = !value.href.startsWith('/');
           return (
@@ -33,23 +45,38 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
         },
       },
       types: {
-        image: ({ value }) => (
-          <div style={{ textAlign: 'center' }}>
-            <Image
-              // TODO: fix types
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              src={imageUrlBuilder(cfg)
-                .image(value)
-                .fit('max')
-                .auto('format')
-                .url()}
-              responsive
-              alt=''
-              title=''
-            />
-          </div>
-        ),
+        image: ({ value }) => {
+          return (
+            <div style={{ textAlign: 'center' }}>
+              <Image
+                // TODO: fix types
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                // src={''}
+                src={imageUrlBuilder(cfg).image(value)?.url()}
+                responsive
+                alt=''
+                title=''
+              />
+            </div>
+          );
+        },
+        imgBlog: ({ value }) => {
+          return (
+            <div style={{ textAlign: 'center' }}>
+              <Image
+                // TODO: fix types
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                src={imageUrlBuilder(cfg).image(value.image).url()}
+                responsive
+                alt=''
+                title=''
+                sx={{ maxHeight: '30vh', maxWidth: 'auto' }}
+              />
+            </div>
+          );
+        },
         video: ({ value }) => (
           <div style={{ textAlign: 'center' }}>
             <YouTube videoId={value.videoId} />
