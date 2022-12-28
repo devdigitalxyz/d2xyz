@@ -11,6 +11,7 @@ import {
   type CMSCollection,
   type CMSItem,
 } from '@d2xyz/cms';
+import { MetaTags } from '@d2xyz/ui/src/utils';
 import { PageLayout } from '../../components/PageLayout';
 import { sanity } from '../../cfg/sanity';
 
@@ -117,6 +118,7 @@ const CollectionPage: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <PageLayout>
+      <MetaTags title={`${result.title} | Dream With Art`} />
       <CMSContentOverview item={result} />
     </PageLayout>
   );

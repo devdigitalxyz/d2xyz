@@ -21,7 +21,7 @@ export const collection = defineType({
     }),
     defineField({
       name: 'link',
-      title: 'Link',
+      title: 'Internal Link',
       type: 'string',
     }),
     defineField({
@@ -31,7 +31,7 @@ export const collection = defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Cover Image',
       type: 'image',
       options: {
         hotspot: true,

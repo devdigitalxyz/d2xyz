@@ -11,7 +11,6 @@ export interface CMSContentOverviewProps {
 }
 
 export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
-  console.log({ item });
   return (
     <Box p={1}>
       <Box>
