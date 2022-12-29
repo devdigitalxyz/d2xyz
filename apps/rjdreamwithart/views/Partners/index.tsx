@@ -45,6 +45,18 @@ export const PartnersView = () => {
               Web Development
             </LinkButton>
           </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              external
+              href='https://www.ricardojrm.com/'
+              title='Prompts by Ricardo Mota'
+            >
+              Prompts by Ricardo Mota
+            </LinkButton>
+          </Box>
         </Grid>
       </Grid>
     </HomeLayout>
