@@ -64,9 +64,9 @@ export const PartnersView = () => {
               fullWidth
               external
               href='https://www.ricardojrm.com/'
-              title='Scripts by Ricardo Mota'
+              title='Copy by Ricardo Mota'
             >
-              Scripts by Ricardo Mota
+              Copy by Ricardo Mota
             </LinkButton>
           </Box>
         </Grid>
