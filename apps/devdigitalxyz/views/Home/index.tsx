@@ -13,23 +13,58 @@ export const HomeView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <Image
-              src='static/img/devdigitalxyz-logo-alpha.png'
-              alt='devdigitalxyz'
-              title='devdigitalxyz'
-              responsive
-              sx={{
-                maxWidth: '540px',
-              }}
-            />
+            <LinkButton href='/' title='D2XYZ Web Development'>
+              <Image
+                src='static/img/devdigitalxyz-logo-alpha.png'
+                alt='devdigitalxyz'
+                title='devdigitalxyz'
+                responsive
+                sx={{
+                  maxWidth: '540px',
+                }}
+              />
+            </LinkButton>
           </Box>
           <Box textAlign='center' mb={3}>
             <Subtitle1 paragraph>
-              Fulfilling Web Development and Frontend Engineering for digital
-              products
+              Fulfilling Web Development and Frontend Engineering for Digital
+              Products
             </Subtitle1>
           </Box>
-          <Box textAlign='center' my={1.5}>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='Blog'
+              href='/blog'
+            >
+              Blog
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='Socials'
+              href='/socials'
+            >
+              Socials
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
+              title='Partners'
+              href='/partners'
+            >
+              Partners
+            </LinkButton>
+          </Box>
+          {/* <Box textAlign='center' my={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
@@ -40,7 +75,7 @@ export const HomeView = () => {
             >
               Book a Project Discovery call
             </LinkButton>
-          </Box>
+          </Box> */}
           {/* <Box textAlign='center' my={1.5}>
             <LinkButton
               color='secondary'

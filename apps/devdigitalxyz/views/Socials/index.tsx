@@ -9,13 +9,14 @@ export const SocialsView = ({
   instagram,
   pinterest,
   // tiktok,
+  github,
   twitter,
   linkedin,
   linkedinOverride,
 }: SocialsProps) => {
   return (
     <HomeLayout>
-      <MetaTags title='Socials | Dream With Art' />
+      <MetaTags title='Socials | D2XYZ' />
       <Grid
         container
         sx={{
@@ -31,9 +32,9 @@ export const SocialsView = ({
           <Box textAlign='center'>
             <LinkButton href='/' title='Dream With Art'>
               <Image
-                src='static/img/rjdreamwithart-logo-alpha.png'
-                alt='rjdreamwithart'
-                title='rjdreamwithart'
+                src='static/img/devdigitalxyz-logo-alpha.png'
+                alt='devdigitalxyz'
+                title='devdigitalxyz'
                 responsive
                 sx={{
                   maxWidth: '450px',
@@ -99,6 +100,20 @@ export const SocialsView = ({
                 title={`${brandName} on LinkedIn`}
               >
                 LinkedIn
+              </LinkButton>
+            </Box>
+          )}
+          {github && (
+            <Box textAlign='center' mt={1.5} mb={1.5}>
+              <LinkButton
+                color='secondary'
+                variant='contained'
+                fullWidth
+                external
+                href={`https://github.com/${brandName}`}
+                title={`${brandName} on Github`}
+              >
+                Github
               </LinkButton>
             </Box>
           )}

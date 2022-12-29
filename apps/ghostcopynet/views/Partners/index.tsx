@@ -1,10 +1,12 @@
 import { Grid, Box } from '@mui/material';
 import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
+import { MetaTags } from '@d2xyz/ui/src/utils';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const PartnersView = () => {
   return (
     <HomeLayout>
+      <MetaTags title='Partners | Ghost Copywriting' />
       <Grid
         container
         sx={{
@@ -38,11 +40,11 @@ export const PartnersView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='AI Concept Art'
               external
-              href='https://www.devdigital.xyz/'
-              title='Web Development'
+              href='https://www.dreamwith.art/'
             >
-              Web Development
+              AI Concept Art
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
@@ -50,11 +52,11 @@ export const PartnersView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='AI Concept Art'
               external
-              href='https://www.dreamwith.art/'
+              href='https://www.devdigital.xyz/'
+              title='Web Development'
             >
-              AI Concept Art
+              Web Development
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>

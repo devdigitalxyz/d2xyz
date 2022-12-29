@@ -26,9 +26,9 @@ const UiApp: AppType = (props: UiAppProps) => {
         MSC_MEASUREMENT_ID={MSC_MEASUREMENT_ID}
         THEME={theme}
         META={{
-          title: 'D2XYZ',
+          title: 'D2XYZ Web Development',
           description:
-            'Fulfilling Web Development and Frontend Engineering for digital products.',
+            'Fulfilling Web Development and Frontend Engineering for Digital Products.',
           author: 'D2XYZ (@devdigitalxyz)',
           favicon: '/static/img/devdigitalxyz-logo.png',
           ogimg: '/static/img/devdigitalxyz-ogimg.png',

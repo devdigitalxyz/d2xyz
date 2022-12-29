@@ -6,7 +6,7 @@ import { HomeLayout } from '../../components/HomeLayout';
 export const PartnersView = () => {
   return (
     <HomeLayout>
-      <MetaTags title='Partners | Dream With Art' />
+      <MetaTags title='Partners | D2XYZ' />
       <Grid
         container
         sx={{
@@ -20,11 +20,11 @@ export const PartnersView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <LinkButton href='/' title='Dream With Art'>
+            <LinkButton href='/' title='D2XYZ Web Development'>
               <Image
-                src='static/img/rjdreamwithart-logo-alpha.png'
-                alt='rjdreamwithart'
-                title='rjdreamwithart'
+                src='static/img/devdigitalxyz-logo-alpha.png'
+                alt='devdigitalxyz'
+                title='devdigitalxyz'
                 responsive
                 sx={{
                   maxWidth: '450px',
@@ -40,11 +40,11 @@ export const PartnersView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='AI Concept Art'
               external
-              href='https://www.devdigital.xyz/'
-              title='Web Development'
+              href='https://www.dreamwith.art/'
             >
-              Web Development
+              AI Concept Art
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
@@ -66,9 +66,9 @@ export const PartnersView = () => {
               fullWidth
               external
               href='https://www.ricardojrm.com/'
-              title='Prompts by Ricardo Mota'
+              title='Code by Ricardo Mota'
             >
-              Prompts by Ricardo Mota
+              Code by Ricardo Mota
             </LinkButton>
           </Box>
         </Grid>

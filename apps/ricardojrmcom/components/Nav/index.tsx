@@ -8,6 +8,7 @@ export const Nav = () => {
       sx={{ color: '#fff' }}
       labels={{ btn: 'Menu' }}
       endIcon={<MenuIcon />}
+      variant='text'
     >
       <Box>
         <Box>
