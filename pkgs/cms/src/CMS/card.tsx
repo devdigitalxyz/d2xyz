@@ -52,21 +52,21 @@ export const CMSContentCard = ({
             />
           </Box>
           <Box
-            p={1}
+            px={1}
             sx={{
               height: CARD_TEXT_HEIGHT,
               overflow: 'hidden',
             }}
           >
+            <Typography variant='caption' color='textSecondary'>
+              {dayjs(date).format(`DD MMM 'YY`)}
+            </Typography>
             <Typography
               variant='subtitle2'
               component='h1'
               sx={{ fontWeight: 'bold' }}
             >
               {title}
-            </Typography>
-            <Typography variant='caption' color='textSecondary'>
-              {dayjs(date).format(`DD MMM 'YY`)}
             </Typography>
             <Typography
               variant='body2'
