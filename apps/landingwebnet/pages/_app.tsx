@@ -27,11 +27,11 @@ const UiApp: AppType = (props: UiAppProps) => {
         THEME={theme}
         META={{
           title: 'Landing Web',
-          description: 'Writing history in your name.',
+          description: 'Land your Business on the Web.',
           author: '@landingwebnet',
           favicon: '/static/img/landingwebnet-logo.png',
           ogimg: '/static/img/landingwebnet-logo.png',
-          keywords: 'copywriting, ghostwriting',
+          keywords: 'web design, internet marketing',
         }}
       >
         <AnyComponent {...pageProps} />
