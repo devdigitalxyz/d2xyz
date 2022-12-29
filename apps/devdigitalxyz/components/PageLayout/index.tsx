@@ -23,6 +23,8 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
             brandName: APP.brandName,
             github: true,
             twitter: true,
+            instagram: true,
+            facebook: true,
             linkedin: true,
             linkedinOverride: 'https://www.linkedin.com/company/devdigitalxyz',
           }}

@@ -16,17 +16,7 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
           <Nav />
         </Header>
       }
-      footer={
-        <Footer
-          copyrightMsg={APP.copyright}
-          socials={{
-            brandName: APP.brandName,
-            github: true,
-            twitter: true,
-            linkedin: true,
-          }}
-        />
-      }
+      footer={<Footer copyrightMsg={APP.copyright} />}
     >
       <Box sx={{ paddingTop: '90px', paddingBottom: '180px' }}>{children}</Box>
     </Layout>
