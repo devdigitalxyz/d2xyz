@@ -22,7 +22,7 @@ export const CMSContent = () => {
                   <CMSContentCard
                     title={item.title}
                     description={item.description}
-                    img={item.image.asset.url}
+                    img={item.image?.asset.url}
                     date={item.publishedAt}
                   />
                 </Link>

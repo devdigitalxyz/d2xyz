@@ -39,7 +39,7 @@ export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
                     <CMSContentCard
                       title={i.title}
                       description={i.description}
-                      img={i.image.asset.url}
+                      img={i.image?.asset.url}
                       date={i.publishedAt}
                     />
                   </Link>

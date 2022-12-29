@@ -1,9 +1,14 @@
 import { Box } from '@mui/material';
-import { MenuIcon, LinkButton } from '@d2xyz/ui';
+import { MenuButton, LinkButton } from '@d2xyz/ui';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Nav = () => {
   return (
-    <MenuIcon sx={{ color: '#fff' }} labels={{ tooltip: 'Navigation' }}>
+    <MenuButton
+      sx={{ color: '#fff' }}
+      labels={{ btn: 'Menu' }}
+      endIcon={<MenuIcon />}
+    >
       <Box>
         {/* <Box>
           <LinkButton fullWidth href='/blog'>
@@ -26,6 +31,6 @@ export const Nav = () => {
           </LinkButton>
         </Box> */}
       </Box>
-    </MenuIcon>
+    </MenuButton>
   );
 };

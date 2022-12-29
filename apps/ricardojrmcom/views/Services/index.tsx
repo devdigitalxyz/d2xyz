@@ -20,15 +20,17 @@ export const ServicesView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <Image
-              src='static/img/ricardojrmcom-logo-alpha.png'
-              alt='ricardojrmcom'
-              title='ricardojrmcom'
-              responsive
-              sx={{
-                maxWidth: '480px',
-              }}
-            />
+            <LinkButton href='/' title='Ricardo Mota'>
+              <Image
+                src='static/img/ricardojrmcom-logo-alpha.png'
+                alt='ricardojrmcom'
+                title='ricardojrmcom'
+                responsive
+                sx={{
+                  maxWidth: '480px',
+                }}
+              />
+            </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
             <Subtitle1 paragraph>Services</Subtitle1>

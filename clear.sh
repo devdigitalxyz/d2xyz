@@ -11,5 +11,5 @@ rm -rf ./*/*/node_modules
 rm -rf ./*/*/storybook-static
 
 # Files
-rm -rf ./yarn.lock
+# rm -rf ./yarn.lock
 rm -rf ./*/*/yarn-error.log

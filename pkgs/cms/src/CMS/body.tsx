@@ -54,7 +54,7 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
                 // @ts-ignore
                 // src={''}
                 src={imageUrlBuilder(cfg).image(value)?.url()}
-                responsive
+                sx={{ maxWidth: '100%' }}
                 alt=''
                 title=''
               />

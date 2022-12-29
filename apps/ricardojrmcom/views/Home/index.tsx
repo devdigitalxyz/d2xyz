@@ -18,20 +18,20 @@ export const HomeView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <Image
-              src='static/img/ricardojrmcom-logo-alpha.png'
-              alt='ricardojrmcom'
-              title='ricardojrmcom'
-              responsive
-              sx={{
-                maxWidth: '480px',
-              }}
-            />
+            <LinkButton href='/' title='Ricardo Mota'>
+              <Image
+                src='static/img/ricardojrmcom-logo-alpha.png'
+                alt='ricardojrmcom'
+                title='Ricardo Mota'
+                responsive
+                sx={{
+                  maxWidth: '480px',
+                }}
+              />
+            </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
-            <Subtitle1 paragraph>
-              Building a portfolio of one-person businesses
-            </Subtitle1>
+            <Subtitle1 paragraph>Indie Business Development</Subtitle1>
           </Box>
           {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
@@ -55,6 +55,28 @@ export const HomeView = () => {
               Books
             </LinkButton>
           </Box> */}
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='outlined'
+              fullWidth
+              title='Blog'
+              href='/blog'
+            >
+              Blog
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='outlined'
+              fullWidth
+              title='Books'
+              href='/blog/book-recommendations'
+            >
+              Books
+            </LinkButton>
+          </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
