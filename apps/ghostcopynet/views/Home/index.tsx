@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, /* LinkButton, */ Subtitle1 } from '@d2xyz/ui';
+import { Image, LinkButton, Subtitle1, Subtitle2 } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {
@@ -18,30 +18,33 @@ export const HomeView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <Image
-              src='static/img/ghostcopynet-logo-alpha.png'
-              alt='ghostcopynet'
-              title='ghostcopynet'
-              responsive
-              sx={{
-                maxWidth: '480px',
-              }}
-            />
+            <LinkButton href='/' title='Ghost Copywriting'>
+              <Image
+                src='static/img/ghostcopynet-logo-alpha.png'
+                alt='ghostcopynet'
+                title='ghostcopynet'
+                responsive
+                sx={{
+                  maxWidth: '480px',
+                }}
+              />
+            </LinkButton>
           </Box>
           <Box textAlign='center' mb={3}>
-            <Subtitle1 paragraph>Ghostwriting - Copywriting</Subtitle1>
+            <Subtitle1 paragraph>Copywriting for Tech and Software</Subtitle1>
+            <Subtitle2>Bookings are closed</Subtitle2>
           </Box>
-          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
-              variant='outlined'
+              variant='contained'
               fullWidth
-              title='About me'
-              href='/about'
+              title='Partners'
+              href='/partners'
             >
-              About me
+              Partners
             </LinkButton>
-          </Box> */}
+          </Box>
         </Grid>
       </Grid>
     </HomeLayout>
