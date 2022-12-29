@@ -36,7 +36,7 @@ export const HomeView = () => {
               fullWidth
               external
               title='Book a Project Discovery call'
-              href='https://calendly.com/ricardojrmcom/web-development-discovery'
+              href='https://calendly.com/ricardojrmcom/project-discovery'
             >
               Book a Project Discovery call
             </LinkButton>
