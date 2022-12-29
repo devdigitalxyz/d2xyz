@@ -50,6 +50,18 @@ export const PartnersView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='Tech Copywriting'
+              external
+              href='https://www.ghostcopy.net/'
+            >
+              Tech Copywriting
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
               external
               href='https://www.ricardojrm.com/'
               title='Prompts by Ricardo Mota'
