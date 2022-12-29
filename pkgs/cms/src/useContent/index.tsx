@@ -11,7 +11,7 @@ import React, {
 import { useLocalState } from '@d2xyz/hooks';
 import type { CMSDocument, CMSCollection, CMSTag } from '../types';
 
-export type ContentSortByType = 'date' | 'title' | 'position';
+export type ContentSortByType = 'date' | 'title';
 export type ContentSortByOpts = 'asc' | 'desc';
 export type ContentViewOpts = 'items' | 'collections';
 
