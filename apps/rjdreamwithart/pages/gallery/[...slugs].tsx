@@ -104,6 +104,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!result) {
     return {
       notFound: true,
+      revalidate: 60,
     };
   }
 
