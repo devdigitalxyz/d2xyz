@@ -35,18 +35,18 @@ export const ServicesView = () => {
           <Box textAlign='center' mb={3} mt={1}>
             <Subtitle1 paragraph>Services</Subtitle1>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='outlined'
               fullWidth
-              title='Frontend Engineering'
+              title='Web Design'
               external
-              href='https://www.devdigital.xyz/'
+              href='https://landingweb.net/'
             >
-              Frontend Engineering
+              Web Design
             </LinkButton>
-          </Box>
+          </Box> */}
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
@@ -57,6 +57,30 @@ export const ServicesView = () => {
               href='https://www.devdigital.xyz/'
             >
               Web Development
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='outlined'
+              fullWidth
+              title='AI Concept Art'
+              external
+              href='https://www.dreamwith.art/'
+            >
+              AI Concept Art
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='outlined'
+              fullWidth
+              title='Tech Copywriting'
+              external
+              href='https://www.ghostcopy.net/'
+            >
+              Tech Copywriting
             </LinkButton>
           </Box>
         </Grid>
