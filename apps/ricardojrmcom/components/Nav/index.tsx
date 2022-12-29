@@ -10,26 +10,21 @@ export const Nav = () => {
       endIcon={<MenuIcon />}
     >
       <Box>
-        {/* <Box>
-          <LinkButton fullWidth href='/blog'>
+        <Box>
+          <LinkButton fullWidth href='/blog' title='Blog'>
             Blog
           </LinkButton>
         </Box>
         <Box>
-          <LinkButton fullWidth href='/books'>
+          <LinkButton fullWidth href='/blog/book-recommendations' title='Books'>
             Books
           </LinkButton>
-        </Box> */}
+        </Box>
         <Box>
           <LinkButton fullWidth href='/services' title='Services'>
             Services
           </LinkButton>
         </Box>
-        {/* <Box>
-          <LinkButton fullWidth href='/about'>
-            About me
-          </LinkButton>
-        </Box> */}
       </Box>
     </MenuButton>
   );
