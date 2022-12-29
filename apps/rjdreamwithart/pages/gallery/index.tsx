@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ContentProvider, type CMSTag } from '@d2xyz/cms';
-import { CollectionsView } from '../../views';
+import { GalleryView } from '../../views';
 import { sanity } from '../../cfg/sanity';
 
 const queryCollections = `
@@ -50,8 +50,9 @@ const CollectionsPage: NextPage = ({
       content={collections}
       tags={{ tags }}
       lsid='rjdwa-collections'
+      defaultViewOpts='collections'
     >
-      <CollectionsView />
+      <GalleryView />
     </ContentProvider>
   );
 };

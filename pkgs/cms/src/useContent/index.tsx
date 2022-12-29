@@ -74,7 +74,7 @@ export interface ContentProviderProps {
   tags?: ContentContextType['tags'];
   lsid?: string;
   onlyItems?: boolean;
-  forceViewOpts?: ContentViewOpts;
+  defaultViewOpts?: ContentViewOpts;
 }
 
 export const ContentProvider = ({
@@ -83,11 +83,11 @@ export const ContentProvider = ({
   tags = init.tags,
   lsid = init.lsid,
   onlyItems,
-  forceViewOpts,
+  defaultViewOpts,
 }: ContentProviderProps) => {
   // states
   const [viewOpt, viewOptSet] = useLocalState<ContentViewOpts>(
-    onlyItems ? 'items' : forceViewOpts || init.viewOpt,
+    onlyItems ? 'items' : defaultViewOpts || init.viewOpt,
     `${lsid}-opt`,
   );
   const [filters, filtersSet] = useLocalState<ContentContextType['filters']>(
