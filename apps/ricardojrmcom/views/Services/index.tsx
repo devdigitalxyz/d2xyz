@@ -35,18 +35,18 @@ export const ServicesView = () => {
           <Box textAlign='center' mb={3} mt={1}>
             <Subtitle1 paragraph>Services</Subtitle1>
           </Box>
-          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='outlined'
               fullWidth
               title='Web Design'
               external
-              href='https://landingweb.net/'
+              href='https://www.landingweb.net/'
             >
               Web Design
             </LinkButton>
-          </Box> */}
+          </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'

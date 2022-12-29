@@ -40,6 +40,18 @@ export const PartnersView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='Web Design'
+              external
+              href='https://www.landingweb.net/'
+            >
+              Web Design
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
               external
               href='https://www.devdigital.xyz/'
               title='Web Development'
