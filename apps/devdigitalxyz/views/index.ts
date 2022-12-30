@@ -1,4 +1,4 @@
 export * from './Home';
-export * from './Blog';
+export * from './Content';
 export * from './Socials';
 export * from './Partners';

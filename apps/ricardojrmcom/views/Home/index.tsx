@@ -38,10 +38,10 @@ export const HomeView = () => {
               color='secondary'
               variant='outlined'
               fullWidth
-              title='Blog'
-              href='/blog'
+              title='Books'
+              href='/content/book-recommendations'
             >
-              Blog
+              Books
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
@@ -49,10 +49,10 @@ export const HomeView = () => {
               color='secondary'
               variant='outlined'
               fullWidth
-              title='Books'
-              href='/blog/book-recommendations'
+              title='Content'
+              href='/content'
             >
-              Books
+              Content
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
@@ -66,17 +66,6 @@ export const HomeView = () => {
               Services
             </LinkButton>
           </Box>
-          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='outlined'
-              fullWidth
-              title='About me'
-              href='/about'
-            >
-              About me
-            </LinkButton>
-          </Box> */}
         </Grid>
       </Grid>
     </HomeLayout>

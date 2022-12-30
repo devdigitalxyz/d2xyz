@@ -36,10 +36,10 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='Blog'
-              href='/blog'
+              title='Content'
+              href='/content'
             >
-              Blog
+              Content
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>

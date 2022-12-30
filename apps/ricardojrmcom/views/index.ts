@@ -1,3 +1,3 @@
 export * from './Home';
 export * from './Services';
-export * from './Blog';
+export * from './Content';

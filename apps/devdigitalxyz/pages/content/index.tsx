@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ContentProvider, type CMSTag } from '@d2xyz/cms';
-import { BlogView } from '../../views';
+import { ContentView } from '../../views';
 import { sanity } from '../../cfg/sanity';
 
 const queryCollections = `
@@ -50,10 +50,10 @@ const CollectionsPage: NextPage = ({
     <ContentProvider
       content={collections}
       tags={{ tags }}
-      lsid='rjrm-blog'
+      lsid='d2xyz-content'
       defaultViewOpts='items'
     >
-      <BlogView />
+      <ContentView />
     </ContentProvider>
   );
 };

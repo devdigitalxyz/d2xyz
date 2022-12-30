@@ -12,13 +12,17 @@ export const Nav = () => {
     >
       <Box>
         <Box>
-          <LinkButton fullWidth href='/blog' title='Blog'>
-            Blog
+          <LinkButton
+            fullWidth
+            href='/content/book-recommendations'
+            title='Books'
+          >
+            Books
           </LinkButton>
         </Box>
         <Box>
-          <LinkButton fullWidth href='/blog/book-recommendations' title='Books'>
-            Books
+          <LinkButton fullWidth href='/content' title='Content'>
+            Content
           </LinkButton>
         </Box>
         <Box>
