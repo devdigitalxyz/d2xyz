@@ -12,6 +12,16 @@ export const Nav = () => {
     >
       <Box>
         <Box>
+          <Box>
+            <LinkButton fullWidth href='/content' title='Content'>
+              Content
+            </LinkButton>
+          </Box>
+          <Box>
+            <LinkButton fullWidth href='/content/portfolio' title='Portfolio'>
+              Portfolio
+            </LinkButton>
+          </Box>
           <LinkButton fullWidth href='/partners' title='Partners'>
             Partners
           </LinkButton>
