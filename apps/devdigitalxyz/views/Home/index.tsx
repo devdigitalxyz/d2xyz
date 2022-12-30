@@ -47,6 +47,17 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
+              title='Portfolio'
+              href='/content/portfolio'
+            >
+              Portfolio
+            </LinkButton>
+          </Box>
+          <Box textAlign='center' mt={1.5} mb={1.5}>
+            <LinkButton
+              color='secondary'
+              variant='contained'
+              fullWidth
               title='Socials'
               href='/socials'
             >
