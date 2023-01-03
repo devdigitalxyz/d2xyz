@@ -1,10 +1,16 @@
+import { useState } from 'react';
 import { Grid, Box, TextField, Paper } from '@mui/material';
 import { Image, LinkButton, Button, Subtitle1 } from '@d2xyz/ui';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Formik } from 'formik';
 import { toast } from 'react-toastify';
 import { HomeLayout } from '../../components/HomeLayout';
 
+const SITEKEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY || '';
+
 export const ContactsView = () => {
+  const [isHuman, isHumanSet] = useState(false);
+
   return (
     <HomeLayout>
       <Grid
@@ -118,7 +124,18 @@ export const ContactsView = () => {
                       </Grid>
                       <Grid item xs={12}>
                         <Box pt={1}>
-                          <Button type='submit' disabled={isSubmitting}>
+                          <HCaptcha
+                            sitekey={SITEKEY}
+                            onVerify={() => isHumanSet(true)}
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Box pt={1}>
+                          <Button
+                            type='submit'
+                            disabled={isSubmitting || !isHuman}
+                          >
                             Submit
                           </Button>
                         </Box>

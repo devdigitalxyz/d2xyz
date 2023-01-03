@@ -10,7 +10,8 @@
         "$NEXT_PUBLIC_SANITY_PROJECT_ID",
         "$NEXT_PUBLIC_SANITY_DATASET",
         "$NEXT_PUBLIC_SANITY_API_VERSION",
-        "$AIRTABLE_API"
+        "$AIRTABLE_API",
+        "$NEXT_PUBLIC_HCAPTCHA_SITEKEY"
       ],
       "outputs": ["dist/**", ".next/**"]
     },
