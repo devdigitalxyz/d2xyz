@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Grid, Box, TextField, Paper } from '@mui/material';
-import { Image, LinkButton, Button, Subtitle1 } from '@d2xyz/ui';
+import { Image, LinkButton, Button, Subtitle1, Caption } from '@d2xyz/ui';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Formik } from 'formik';
 import { toast } from 'react-toastify';
@@ -123,7 +123,12 @@ export const ContactsView = () => {
                         />
                       </Grid>
                       <Grid item xs={12}>
-                        <Box pt={1}>
+                        <Caption>
+                          This data will be used for reply purposes only
+                        </Caption>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Box>
                           <HCaptcha
                             sitekey={SITEKEY}
                             onVerify={() => isHumanSet(true)}
@@ -131,7 +136,7 @@ export const ContactsView = () => {
                         </Box>
                       </Grid>
                       <Grid item xs={12}>
-                        <Box pt={1}>
+                        <Box>
                           <Button
                             type='submit'
                             disabled={isSubmitting || !isHuman}
