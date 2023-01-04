@@ -58,71 +58,12 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='Socials'
-              href='/socials'
-            >
-              Socials
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
               title='Partners'
               href='/partners'
             >
               Partners
             </LinkButton>
           </Box>
-          {/* <Box textAlign='center' my={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              external
-              title='Book a Project Discovery call'
-              href='https://calendly.com/ricardojrmcom/project-discovery'
-            >
-              Book a Project Discovery call
-            </LinkButton>
-          </Box> */}
-          {/* <Box textAlign='center' my={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              external
-              title='Link Tree'
-              href='https://ricardojrmcom.gumroad.com/l/link-tree'
-            >
-              Link Tree 🎄
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' my={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              external
-              title='Landing Page'
-              href='https://ricardojrmcom.gumroad.com/l/landing-page'
-            >
-              Landing Page 🚀
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' my={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='contained'
-              fullWidth
-              external
-              title='Marketing Website'
-              href='https://ricardojrmcom.gumroad.com/l/websites'
-            >
-              Marketing Website 🔥
-            </LinkButton>
-          </Box> */}
         </Grid>
       </Grid>
     </HomeLayout>

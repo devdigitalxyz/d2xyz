@@ -38,17 +38,6 @@ export const HomeView = () => {
               color='secondary'
               variant='outlined'
               fullWidth
-              title='Books'
-              href='/content/book-recommendations'
-            >
-              Books
-            </LinkButton>
-          </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
-            <LinkButton
-              color='secondary'
-              variant='outlined'
-              fullWidth
               title='Content'
               href='/content'
             >

@@ -16,7 +16,7 @@ import { PageLayout } from '../../components/PageLayout';
 import { sanity } from '../../cfg/sanity';
 
 const querySlugs = `
-  *[_type == 'collection']{
+  *[_type == 'collectionGallery']{
     _id,
     slug {
       current
@@ -31,7 +31,7 @@ const querySlugs = `
 `;
 
 const queryCollection = `
-  *[_type == 'collection' && slug.current == $slug][0]{
+  *[_type == 'collectionGallery' && slug.current == $slug][0]{
     _id, body, description, featured, premium, 
     publishedAt, slug, link, external, title, video, image{
       asset->{url}
@@ -114,7 +114,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-const BlogPage: NextPage = ({
+const GalleryItemPage: NextPage = ({
   result,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -125,4 +125,4 @@ const BlogPage: NextPage = ({
   );
 };
 
-export default BlogPage;
+export default GalleryItemPage;

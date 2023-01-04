@@ -3,10 +3,10 @@ import { CMS } from '@d2xyz/cms';
 import { MetaTags } from '@d2xyz/ui/src/utils';
 import { PageLayout } from '../../components/PageLayout';
 
-export const ContentView = () => {
+export const GalleryView = () => {
   return (
     <PageLayout>
-      <MetaTags title='Content | Ghostcopy' />
+      <MetaTags title='Gallery | D2XYZ' />
       <Box>
         <CMS />
       </Box>

@@ -111,9 +111,9 @@ export const SocialsView = ({
                 fullWidth
                 external
                 href={`https://github.com/${brandName}`}
-                title={`${brandName} on Github`}
+                title={`${brandName} on GitHub`}
               >
-                Github
+                GitHub
               </LinkButton>
             </Box>
           )}

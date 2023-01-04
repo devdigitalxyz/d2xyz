@@ -18,7 +18,7 @@ export const HomeView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <LinkButton href='/' title='Ghost Copywriting'>
+            <LinkButton href='/' title='Ghostcopy'>
               <Image
                 src='static/img/ghostcopynet-logo-alpha.png'
                 alt='ghostcopynet'
@@ -34,7 +34,7 @@ export const HomeView = () => {
             <Subtitle1 paragraph>Copywriting for Tech and Software</Subtitle1>
             <Subtitle2>Bookings are closed</Subtitle2>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
@@ -55,7 +55,7 @@ export const HomeView = () => {
             >
               Portfolio
             </LinkButton>
-          </Box>
+          </Box> */}
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'

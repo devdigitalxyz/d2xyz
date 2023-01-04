@@ -6,7 +6,7 @@ import { HomeLayout } from '../../components/HomeLayout';
 export const PartnersView = () => {
   return (
     <HomeLayout>
-      <MetaTags title='Partners | Ghost Copywriting' />
+      <MetaTags title='Partners | Ghostcopy' />
       <Grid
         container
         sx={{
@@ -20,7 +20,7 @@ export const PartnersView = () => {
       >
         <Grid item>
           <Box textAlign='center'>
-            <LinkButton href='/' title='Ghost Copywriting'>
+            <LinkButton href='/' title='Ghostcopy'>
               <Image
                 src='static/img/ghostcopynet-logo-alpha.png'
                 alt='ghostcopynet'

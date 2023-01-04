@@ -26,7 +26,7 @@ const UiApp: AppType = (props: UiAppProps) => {
         MSC_MEASUREMENT_ID={MSC_MEASUREMENT_ID}
         THEME={theme}
         META={{
-          title: 'Ghost Copywriting',
+          title: 'Ghostcopy',
           description: 'Writing history in your name.',
           author: '@ghostcopynet',
           favicon: '/static/img/ghostcopynet-logo.png',
