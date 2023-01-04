@@ -63,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slugs: [collection.slug.current],
       },
     });
-    console.log({ collection });
+
     if (collection.items) {
       collection.items.forEach((item) => {
         if (item) {
