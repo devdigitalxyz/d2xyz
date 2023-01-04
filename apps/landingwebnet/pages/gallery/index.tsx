@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ContentProvider, type CMSTag } from '@d2xyz/cms';
-import { ContentView } from '../../views';
+import { GalleryView } from '../../views';
 import { sanity } from '../../cfg/sanity';
 
 const queryCollections = `
@@ -53,7 +53,7 @@ const GalleryPage: NextPage = ({
       lsid='land-gallery'
       defaultViewOpts='items'
     >
-      <ContentView />
+      <GalleryView />
     </ContentProvider>
   );
 };
