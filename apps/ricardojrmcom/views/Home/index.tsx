@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
+import { Image, LinkButton, Subtitle1, Subtitle2 } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {
@@ -25,13 +25,14 @@ export const HomeView = () => {
                 title='Ricardo Mota'
                 responsive
                 sx={{
-                  maxWidth: '480px',
+                  maxWidth: '420px',
                 }}
               />
             </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
             <Subtitle1 paragraph>Indie Business Development</Subtitle1>
+            <Subtitle2>All about AI and Automation</Subtitle2>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton

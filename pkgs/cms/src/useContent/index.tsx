@@ -62,7 +62,7 @@ const init: ContentContextType = {
   viewOpt: 'items',
   viewOptSet: () => undefined,
   lsid: 'd2xyz-cms',
-  expanded: true,
+  expanded: false,
   toggleExpanded: () => undefined,
 };
 

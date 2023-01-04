@@ -27,7 +27,7 @@ export const ServicesView = () => {
                 title='ricardojrmcom'
                 responsive
                 sx={{
-                  maxWidth: '480px',
+                  maxWidth: '420px',
                 }}
               />
             </LinkButton>
