@@ -51,7 +51,7 @@ const GalleryPage: NextPage = ({
       content={collections}
       tags={{ tags }}
       lsid='rjrm-gallery'
-      defaultViewOpts='items'
+      defaultViewOpts='collections'
     >
       <ContentView />
     </ContentProvider>
