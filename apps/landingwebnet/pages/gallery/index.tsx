@@ -51,7 +51,7 @@ const GalleryPage: NextPage = ({
       content={collections}
       tags={{ tags }}
       lsid='land-gallery'
-      defaultViewOpts='items'
+      defaultViewOpts='collections'
     >
       <GalleryView />
     </ContentProvider>

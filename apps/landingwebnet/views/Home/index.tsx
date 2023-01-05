@@ -49,10 +49,10 @@ export const HomeView = () => {
               color='secondary'
               variant='contained'
               fullWidth
-              title='Portfolio'
-              href='/content/portfolio'
+              title='Gallery'
+              href='/gallery'
             >
-              Portfolio
+              Gallery
             </LinkButton>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
