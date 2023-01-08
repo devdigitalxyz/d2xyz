@@ -28,7 +28,7 @@ const UiApp: AppType = (props: UiAppProps) => {
         META={{
           title: 'D2XYZ Web Development',
           description:
-            'Fulfilling Web Development and Frontend Engineering for Digital Products.',
+            '👾 Fulfilling Web Development and Frontend Engineering for Digital Products.',
           author: 'D2XYZ (@devdigitalxyz)',
           favicon: '/static/img/devdigitalxyz-logo.png',
           ogimg: '/static/img/devdigitalxyz-ogimg.png',
