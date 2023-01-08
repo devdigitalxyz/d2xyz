@@ -29,11 +29,12 @@ const UiApp: AppType = (props: UiAppProps) => {
         THEME={theme}
         META={{
           title: 'Dream With Art',
-          description: 'The Best AI Artwork.',
+          description: '🎨 Unlimited AI Artworks',
           author: 'Dream With Art (@rjdreamwithart)',
           favicon: '/static/img/rjdreamwithart-logo.png',
           ogimg: '/static/img/rjdreamwithart-logo.png',
-          keywords: 'art, concept art, character design',
+          keywords:
+            'art, concept art, character design, ai art, midjourney, stable diffusion',
         }}
       >
         <CMSConfigProvider cfg={config}>

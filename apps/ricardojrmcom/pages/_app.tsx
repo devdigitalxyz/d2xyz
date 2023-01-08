@@ -29,8 +29,7 @@ const UiApp: AppType = (props: UiAppProps) => {
         THEME={theme}
         META={{
           title: 'Ricardo Mota',
-          description:
-            'Building a portfolio of one-person businesses by myself.',
+          description: '🤖 All about AI and Automation.',
           author: 'Ricardo Mota (@ricardojrmcom)',
           favicon: '/static/img/ricardojrmcom-logo.png',
           ogimg: '/static/img/ricardojrmcom-logo.png',

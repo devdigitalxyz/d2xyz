@@ -29,7 +29,7 @@ const UiApp: AppType = (props: UiAppProps) => {
         THEME={theme}
         META={{
           title: 'Landing Web',
-          description: 'Land your Business on the Web.',
+          description: '🚀 Land your Business on the Web',
           author: '@landingwebnet',
           favicon: '/static/img/landingwebnet-logo.png',
           ogimg: '/static/img/landingwebnet-logo.png',

@@ -27,7 +27,8 @@ const UiApp: AppType = (props: UiAppProps) => {
         THEME={theme}
         META={{
           title: 'Ghostcopy',
-          description: 'Writing history in your name.',
+          description:
+            '👻 Ghostwriting and Copywriting about Tech and Software',
           author: '@ghostcopynet',
           favicon: '/static/img/ghostcopynet-logo.png',
           ogimg: '/static/img/ghostcopynet-logo.png',
