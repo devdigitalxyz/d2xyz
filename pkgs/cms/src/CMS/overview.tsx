@@ -1,20 +1,31 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
-import { Body2, H4, Caption, Link } from '@d2xyz/ui';
+import { Body2, H1, Caption, Subtitle2, Link } from '@d2xyz/ui';
 import { type CMSCollection } from '../types';
 import { CMSContentCard } from './card';
 import { CMSContentBody } from './body';
 
 export interface CMSContentOverviewProps {
   item: CMSCollection;
+  collection?: CMSCollection | null;
 }
 
-export const CMSContentOverview = ({ item }: CMSContentOverviewProps) => {
+export const CMSContentOverview = ({
+  item,
+  collection,
+}: CMSContentOverviewProps) => {
   return (
     <Box p={1}>
       <Box>
-        <H4>{item.title}</H4>
+        {collection && (
+          <Link href={collection.link} decoration>
+            <Subtitle2 sx={{ fontWeight: 'bold' }}>
+              {collection.title}
+            </Subtitle2>
+          </Link>
+        )}
+        <H1>{item.title}</H1>
         <Caption color='textSecondary' gutterBottom>
           {dayjs(item.publishedAt).format(`DD MMM 'YY`)}
         </Caption>

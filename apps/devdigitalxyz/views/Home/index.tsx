@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
+import { Image, LinkButton, Subtitle1, Subtitle2 } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {
@@ -30,8 +30,9 @@ export const HomeView = () => {
               Fulfilling Web Development and Frontend Engineering for Digital
               Products
             </Subtitle1>
+            <Subtitle2>Bookings are closed</Subtitle2>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
@@ -52,7 +53,7 @@ export const HomeView = () => {
             >
               Portfolio
             </LinkButton>
-          </Box>
+          </Box> */}
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'

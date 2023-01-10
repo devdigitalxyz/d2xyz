@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { PortableText, type PortableTextProps } from '@portabletext/react';
 import YouTube from 'react-youtube';
 import imageUrlBuilder from '@sanity/image-url';
-import { Image, H4, H5, H6, Body1, Link, LinkButton } from '@d2xyz/ui';
+import { Image, H1, H2, H3, Body1, Link, LinkButton } from '@d2xyz/ui';
 import { type CMSItem } from '../types';
 import { useCMSConfig } from '../useContent';
 
@@ -17,9 +17,9 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
   const components = useMemo<PortableTextProps<CMSItem>['components']>(
     () => ({
       blocks: {
-        h1: ({ value }: any) => <H4>{value}</H4>,
-        h2: ({ value }: any) => <H5>{value}</H5>,
-        h3: ({ value }: any) => <H6>{value}</H6>,
+        h1: ({ value }: any) => <H1>{value}</H1>,
+        h2: ({ value }: any) => <H2>{value}</H2>,
+        h3: ({ value }: any) => <H3>{value}</H3>,
         normal: ({ value }: any) => <Body1>{value}</Body1>,
       },
       marks: {

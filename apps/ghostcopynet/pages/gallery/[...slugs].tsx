@@ -82,16 +82,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   let result = null;
+  let collection = null;
 
   if (params?.slugs) {
     const slugs = params.slugs as string[];
     if (slugs.length === 1) {
-      const collection: CMSCollection = await sanity.fetch(queryCollection, {
+      const coll: CMSCollection = await sanity.fetch(queryCollection, {
         slug: slugs[0],
       });
-      result = collection;
+      result = coll;
     } else if (slugs.length === 2) {
-      const collection = await sanity.fetch(queryCollection, {
+      collection = await sanity.fetch(queryCollection, {
         slug: slugs[0],
       });
       const document = collection.items.find((item: CMSItem) => {
@@ -109,18 +110,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { result },
+    props: { result, collection },
     revalidate: 60,
   };
 };
 
 const GalleryItemPage: NextPage = ({
   result,
+  collection,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <PageLayout>
       <MetaTags title={`${result.title} | Ghostcopy`} />
-      <CMSContentOverview item={result} />
+      <CMSContentOverview item={result} collection={collection} />
     </PageLayout>
   );
 };
