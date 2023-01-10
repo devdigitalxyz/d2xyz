@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Box, Grid } from '@mui/material';
 import dayjs from 'dayjs';
 import { Body2, H1, Caption, Subtitle2, Link } from '@d2xyz/ui';
@@ -15,13 +16,32 @@ export const CMSContentOverview = ({
   item,
   collection,
 }: CMSContentOverviewProps) => {
+  const { pathname } = useRouter();
+  const backLinkOpts = useMemo(() => {
+    if (pathname.includes('/gallery')) {
+      return {
+        label: 'Gallery',
+        link: '/gallery',
+      };
+    }
+    return {
+      label: 'Content',
+      link: '/content',
+    };
+  }, [pathname]);
   return (
     <Box p={1}>
       <Box>
-        {collection && (
+        {collection ? (
           <Link href={collection.link} decoration>
             <Subtitle2 sx={{ fontWeight: 'bold' }}>
               {collection.title}
+            </Subtitle2>
+          </Link>
+        ) : (
+          <Link href={backLinkOpts.link} decoration>
+            <Subtitle2 sx={{ fontWeight: 'bold' }}>
+              {backLinkOpts.label}
             </Subtitle2>
           </Link>
         )}
