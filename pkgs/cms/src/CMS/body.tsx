@@ -16,12 +16,12 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
 
   const components = useMemo<PortableTextProps<CMSItem>['components']>(
     () => ({
-      blocks: {
-        h1: ({ value }: any) => <H1>{value}</H1>,
-        h2: ({ value }: any) => <H2>{value}</H2>,
-        h3: ({ value }: any) => <H3>{value}</H3>,
-        normal: ({ value }: any) => <Body1>{value}</Body1>,
-      },
+      // blocks: {
+      //   h1: ({ value }: any) => <H1>{value}</H1>,
+      //   h2: ({ value }: any) => <H2>{value}</H2>,
+      //   h3: ({ value }: any) => <H3>{value}</H3>,
+      //   normal: ({ value }: any) => <Body1>{value}</Body1>,
+      // },
       marks: {
         linkBtn: ({ children, value }) => {
           const external = !value.href.startsWith('/');
