@@ -50,42 +50,44 @@ export const CMSContentOverview = ({
           {dayjs(item.publishedAt).format(`DD MMM 'YY`)}
         </Caption>
         {item.description && <Body2 paragraph>{item.description}</Body2>}
-        {item.body && <CMSContentBody item={item} />}
-        {item.items && (
-          <Grid
-            container
-            alignItems='center'
-            justifyContent='center'
-            spacing={2}
-            py={2}
-          >
-            {item.items.map((i) => (
-              <Grid item key={i._id}>
-                {i.link || i.external ? (
-                  <Link
-                    href={(i.link || i.external) as string}
-                    external={!!i.external}
-                    title={i.title}
-                  >
+        <Box pt={2.1}>
+          {item.body && <CMSContentBody item={item} />}
+          {item.items && (
+            <Grid
+              container
+              alignItems='center'
+              justifyContent='center'
+              spacing={2}
+              py={2}
+            >
+              {item.items.map((i) => (
+                <Grid item key={i._id}>
+                  {i.link || i.external ? (
+                    <Link
+                      href={(i.link || i.external) as string}
+                      external={!!i.external}
+                      title={i.title}
+                    >
+                      <CMSContentCard
+                        title={i.title}
+                        description={i.description}
+                        img={i.image?.asset.url}
+                        date={i.publishedAt}
+                      />
+                    </Link>
+                  ) : (
                     <CMSContentCard
                       title={i.title}
                       description={i.description}
-                      img={i.image?.asset.url}
+                      img={i.image.asset.url}
                       date={i.publishedAt}
                     />
-                  </Link>
-                ) : (
-                  <CMSContentCard
-                    title={i.title}
-                    description={i.description}
-                    img={i.image.asset.url}
-                    date={i.publishedAt}
-                  />
-                )}
-              </Grid>
-            ))}
-          </Grid>
-        )}
+                  )}
+                </Grid>
+              ))}
+            </Grid>
+          )}
+        </Box>
       </Box>
     </Box>
   );

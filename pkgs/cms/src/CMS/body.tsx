@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useMemo } from 'react';
+import { Box } from '@mui/material';
 import { PortableText, type PortableTextProps } from '@portabletext/react';
 import YouTube from 'react-youtube';
 import imageUrlBuilder from '@sanity/image-url';
@@ -16,12 +17,18 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
 
   const components = useMemo<PortableTextProps<CMSItem>['components']>(
     () => ({
-      // blocks: {
-      //   h1: ({ value }: any) => <H1>{value}</H1>,
-      //   h2: ({ value }: any) => <H2>{value}</H2>,
-      //   h3: ({ value }: any) => <H3>{value}</H3>,
-      //   normal: ({ value }: any) => <Body1>{value}</Body1>,
-      // },
+      block: {
+        h1: ({ children }: any) => <H1>{children}</H1>,
+        h2: ({ children }: any) => <H2>{children}</H2>,
+        h3: ({ children }: any) => <H3>{children}</H3>,
+        normal: ({ children }: any) => {
+          if (!children[0]) return <Box py={1.5} />;
+          return <Body1>{children}</Body1>;
+        },
+      },
+      list: {
+        bullet: ({ children }) => <ul style={{ margin: 0 }}>{children}</ul>,
+      },
       marks: {
         linkBtn: ({ children, value }) => {
           const external = !value.href.startsWith('/');
@@ -57,22 +64,6 @@ export const CMSContentBody = ({ item }: CMSContentBodyProps) => {
                 sx={{ maxWidth: '100%' }}
                 alt=''
                 title=''
-              />
-            </div>
-          );
-        },
-        imgBlog: ({ value }) => {
-          return (
-            <div style={{ textAlign: 'center' }}>
-              <Image
-                // TODO: fix types
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                src={imageUrlBuilder(cfg).image(value.image).url()}
-                responsive
-                alt=''
-                title=''
-                sx={{ maxHeight: '30vh', maxWidth: 'auto' }}
               />
             </div>
           );
