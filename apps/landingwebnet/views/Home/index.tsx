@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { Image, LinkButton, Subtitle1 } from '@d2xyz/ui';
+import { Image, LinkButton, Subtitle1, Subtitle2 } from '@d2xyz/ui';
 import { HomeLayout } from '../../components/HomeLayout';
 
 export const HomeView = () => {
@@ -32,6 +32,13 @@ export const HomeView = () => {
           </Box>
           <Box textAlign='center' mb={3}>
             <Subtitle1 paragraph>Land your Business on the Web</Subtitle1>
+            <Subtitle2 gutterBottom>🎨 Beautiful Web Design 🎨</Subtitle2>
+            <Subtitle2 gutterBottom>
+              🤖 Effective Internet Marketing 🤖
+            </Subtitle2>
+            <Subtitle2 gutterBottom>
+              🚀 High Converting Landing Pages 🚀
+            </Subtitle2>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
