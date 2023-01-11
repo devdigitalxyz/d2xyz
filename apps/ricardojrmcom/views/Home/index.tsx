@@ -31,7 +31,7 @@ export const HomeView = () => {
             </LinkButton>
           </Box>
           <Box textAlign='center' mb={3} mt={1}>
-            <Subtitle1 paragraph>Indie Business Development</Subtitle1>
+            <Subtitle1 paragraph>Indie Business Hacking</Subtitle1>
             <Subtitle2>All about AI and Automation</Subtitle2>
           </Box>
           <Box textAlign='center' mt={1.5} mb={1.5}>
