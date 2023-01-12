@@ -11,7 +11,7 @@ export const Nav = () => {
       variant='text'
     >
       <Box>
-        <Box>
+        {/* <Box>
           <LinkButton fullWidth href='/content' title='Content'>
             Content
           </LinkButton>
@@ -20,7 +20,7 @@ export const Nav = () => {
           <LinkButton fullWidth href='/content/portfolio' title='Portfolio'>
             Portfolio
           </LinkButton>
-        </Box>
+        </Box> */}
         <Box>
           <LinkButton fullWidth href='/gallery' title='Gallery'>
             Gallery

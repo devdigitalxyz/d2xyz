@@ -40,7 +40,7 @@ export const HomeView = () => {
               🚀 High Converting Landing Pages 🚀
             </Subtitle2>
           </Box>
-          <Box textAlign='center' mt={1.5} mb={1.5}>
+          {/* <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
               variant='contained'
@@ -50,7 +50,7 @@ export const HomeView = () => {
             >
               Content
             </LinkButton>
-          </Box>
+          </Box> */}
           <Box textAlign='center' mt={1.5} mb={1.5}>
             <LinkButton
               color='secondary'
